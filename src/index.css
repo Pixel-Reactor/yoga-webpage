@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Pathway+Gothic+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flip{
+  transform: rotateY(180deg);
+}
