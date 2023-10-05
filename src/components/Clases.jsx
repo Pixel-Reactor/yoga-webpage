@@ -1,12 +1,17 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { BiLinkExternal } from "react-icons/bi";
 const Clases = () => {
+  const clases = useRef();
+  useEffect(() => {
+    console.log('top clases',clases.current.getBoundingClientRect().top)
+  }, []);
+ 
   return (
     <div className=" h-full bg-gradient-to-t flex justify-center from-zinc-900/90 via-stone-800/90 to-amber-950/90  overflow-hidden py-10 ">
-      <div className="bg-[url('/llleaves.svg')] bg-no-repeat bg-cover bg-center w-full h-full   p-6">
-        <div className="max-w-5xl mx-auto">
+      <div className="bg-[url('/llleaves.svg')] font-[dosis] bg-no-repeat bg-cover bg-center w-full h-full p-6">
+        <div ref={clases} className="max-w-5xl mx-auto">
           <h3 className="text-sm text-zinc-100 font-[Dosis] flex items-center gap-2 z-10">
             TODOS LOS NIVELES
           </h3>
@@ -34,8 +39,8 @@ const Clases = () => {
               />
             </div>
             <div className="h-full flex gap-3 items-left flex-col mt-6 justify-center sm:mt-20 max-w-sm ">
-              <p className="font-[Dosis]  text-2xl">PRESENCIAL</p>
-              <p className="font-sans leading-6 font-extralight text-lg">
+              <p className="  text-2xl">PRESENCIAL</p>
+              <p className=" leading-6 font-extralight text-lg">
                 <span className="flex gap-2 items-center">
                   <AiOutlineCalendar /> Todos los Miércoles{" "}
                 </span>
@@ -62,22 +67,47 @@ const Clases = () => {
               <img
                 src="/laptop.png"
                 alt="presencial"
+                loading="lazy"
                 className=" max-w-xs w-[300px] h-[200px] object-contain"
               />
               <img
                 src="/helebg.jpg"
                 alt="presencial"
+                loading="lazy"
                 className=" w-[234px] rounded-sm h-[149px] top-[20px]  object-cover absolute"
               />
             </div>
             <div className="h-full flex items-left flex-col mt-6 justify-center sm:mt-6 gap-3 max-w-sm ">
               <p className="font-[Dosis]  text-2xl">ONLINE</p>
-              <span className="flex gap-2 items-center font-sans leading-6 font-extralight text-lg">
+              <span className="flex gap-2 items-center  leading-6 font-extralight text-lg">
                 <AiOutlineCalendar /> Domingo - Martes - Jueves{" "}
               </span>
-              <p className="font-sans leading-6 font-extralight text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.,
-                veritatis ipsam atque placeat harum adipisci!
+              <p className=" leading-6 font-extralight text-lg">
+                Clases online con grupos reducidos para poder atender y acompañar lo mejor posible.
+                Cuando la distancia y el tiempo no nos lo permite las clases online son una fantastica alternativa.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col mt-10 p-6 sm:flex-row text-zinc-50 w-full justify-between">
+            <div>
+              <img
+                src="/img3.png"
+                alt="Privadas"
+                className="min-w-[18rem] max-w-xs"
+                loading="lazy"
+              />
+            </div>
+            <div className="h-full flex gap-3 items-left flex-col mt-6 justify-center sm:mt-20 max-w-sm ">
+              <p className="font-[Dosis]  text-2xl">PRIVADAS</p>
+              <p className=" leading-6 font-extralight text-lg">
+                <span className="flex gap-2 items-center">
+                  <AiOutlineCalendar /> Todos los Miércoles{" "}
+                </span>
+              </p>
+              <p className=" leading-6 font-extralight text-lg">
+                Opción para aquellos que tengas un horario complicado de compajinar con otras clases o cuando requerimos una atención especial. 
+                Buscaremos lo que mejor se adapte a ti y rofundizaremos en la practica.
+                &#40; Hasta dos personas &#41;
               </p>
             </div>
           </div>
