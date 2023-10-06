@@ -26,7 +26,7 @@ export const TaskContextProvider = ({ children }) => {
    
     return (
 
-        <TaskContext.Provider value={{modmen,setmodmen,home,contact,about,classes,prices,prices,Scrollto}}>
+        <TaskContext.Provider value={{modmen,setmodmen,home,contact,about,classes,prices,Scrollto}}>
             {children}
         </TaskContext.Provider>
 
