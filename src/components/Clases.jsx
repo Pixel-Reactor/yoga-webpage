@@ -2,16 +2,35 @@ import React,{useRef,useEffect} from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { BiLinkExternal } from "react-icons/bi";
-const Clases = () => {
-  const clases = useRef();
+import { Handler } from "../context/Context";
+
+const Clases = (props) => {
+  const { classes } = Handler();
+
   useEffect(() => {
-    console.log('top clases',clases.current.getBoundingClientRect().top)
+    const updateTop = (ref)=>{ 
+     const rect = classes.current.getBoundingClientRect() ;
+    
+     if(    
+      rect.top <= window.innerHeight/2 &&
+      rect.bottom >= (window.innerHeight || document.documentElement.clientHeight)
+      ){
+      props.isOn(2)
+    }
+  }
+    window.addEventListener('resize', updateTop);
+    window.addEventListener('scroll', updateTop);
+
+    // Limpia los event listeners cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize', updateTop);
+      window.removeEventListener('scroll', updateTop);
+    };
   }, []);
- 
   return (
-    <div className=" h-full bg-gradient-to-t flex justify-center from-zinc-900/90 via-stone-800/90 to-amber-950/90  overflow-hidden py-10 ">
+    <div ref={classes} className=" h-full bg-gradient-to-t flex justify-center from-zinc-900/90 via-stone-800/90 to-amber-950/90  overflow-hidden py-10 ">
       <div className="bg-[url('/llleaves.svg')] font-[dosis] bg-no-repeat bg-cover bg-center w-full h-full p-6">
-        <div ref={clases} className="max-w-5xl mx-auto">
+        <div  className="max-w-5xl mx-auto">
           <h3 className="text-sm text-zinc-100 font-[Dosis] flex items-center gap-2 z-10">
             TODOS LOS NIVELES
           </h3>
@@ -21,7 +40,7 @@ const Clases = () => {
           <h3 className="text-sm text-zinc-100 font-[Dosis] flex items-center gap-2 z-10">
             PRESENCIAL - ONLINE - PRIVADAS
           </h3>
-          <div className="z-0 absolute translate-y-[-160px] translate-x-[-130px] ">
+          <div  className="z-0 absolute translate-y-[-160px] translate-x-[-130px] ">
             <img
               className="animate-spin-slow-reverse"
               src="/vvvortex.svg"
@@ -89,7 +108,7 @@ const Clases = () => {
             </div>
           </div>
           <div className="flex flex-col mt-10 p-6 sm:flex-row text-zinc-50 w-full justify-between">
-            <div>
+            <div className="sm:mt-16">
               <img
                 src="/img3.png"
                 alt="Privadas"
@@ -97,7 +116,7 @@ const Clases = () => {
                 loading="lazy"
               />
             </div>
-            <div className="h-full flex gap-3 items-left flex-col mt-6 justify-center sm:mt-20 max-w-sm ">
+            <div className="h-full flex gap-3 items-left  flex-col mt-6 justify-center sm:mt-20 max-w-sm  ">
               <p className="font-[Dosis]  text-2xl">PRIVADAS</p>
               <p className=" leading-6 font-extralight text-lg">
                 <span className="flex gap-2 items-center">

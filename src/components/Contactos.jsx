@@ -1,9 +1,35 @@
-import React from "react";
+import React,{useEffect,useRef} from "react";
 import {FaWhatsapp} from 'react-icons/fa'
 import {BsInstagram} from 'react-icons/bs'
-const Contactos = () => {
+import { Handler } from "../context/Context";
+
+const Contactos = (props) => {
+
+  const { contact } = Handler();
+  useEffect(() => {
+    const updateTop = ()=>{ 
+      const rect = contact.current.getBoundingClientRect() ;
+     
+      if(    
+       rect.top <= window.innerHeight/2 || document.documentElement.clientHeight/2 &&
+       rect.bottom <= (window.innerHeight + window.innerHeight/2 || document.documentElement.clientHeight + document.documentElement.clientHeight.innerHeight/2 )
+       ){
+       props.isOn(4)
+       
+     }
+    }
+     window.addEventListener('resize', updateTop);
+     window.addEventListener('scroll', updateTop);
+ 
+     // Limpia los event listeners cuando el componente se desmonta
+     return () => {
+       window.removeEventListener('resize', updateTop);
+       window.removeEventListener('scroll', updateTop);
+     };
+  }, []);
+ 
   return (
-    <div className="bg-gradient-to-t dark  from-zinc-900/90 via-stone-800/90 to-amber-950/90  font-[Dosis] ">
+    <div ref={contact} className="bg-gradient-to-t dark  from-zinc-900/90 via-stone-800/90 to-amber-950/90  font-[Dosis] ">
         <div className="bg-[url('/ooorganize.svg')] bg-no-repeat bg-cover bg-center w-full h-full p-10 ">
             <div className="p-6 max-w-xl">
       <div className="text-4xl tracking-tight  text-gray-900 dark:text-white">

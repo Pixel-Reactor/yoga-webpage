@@ -1,13 +1,36 @@
-import React from "react";
+import React,{useEffect,useRef} from "react";
+import { Handler } from "../context/Context";
 
-const Precios = () => {
+const Precios = (props) => {
+  const { prices } = Handler();
+
+  
+  useEffect(() => {
+    const updateTop = (ref)=>{ 
+      const rect = prices.current.getBoundingClientRect() ;
+      if(    
+       rect.top <= window.innerHeight/2 &&
+       rect.bottom >= (window.innerHeight || document.documentElement.clientHeight)
+       ){
+       props.isOn(3)
+     }
+   }
+   
+    window.addEventListener('resize', updateTop);
+    window.addEventListener('scroll', updateTop);
+
+    // Limpia los event listeners cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize', updateTop);
+      window.removeEventListener('scroll', updateTop);
+    };
+  }, []);
   return (
-    <section className="bg-gradient-to-t  from-zinc-900/90 via-stone-800/90 font-[Dosis] to-amber-950/90 py-10">
+    <section id='prices' ref={prices} className="bg-gradient-to-t  from-zinc-900/90 via-stone-800/90 font-[Dosis] to-amber-950/90 py-10">
       
-      <div className="py-8 px-4   max-w-screen-3xl lg:py-16 lg:px-6 relative"> 
+      <div  className="py-8 px-4 mt-20  max-w-screen-3xl lg:py-16 lg:px-6 relative"> 
       <div className="z-0 absolute top-[-135px] left-0 right-0 mx-auto w-96 ">
             <img
-          
               src="/cccoil.svg"
               alt="vortex"
               width="350px"

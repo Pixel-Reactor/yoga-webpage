@@ -1,8 +1,10 @@
-import React,{ useState, useEffect,Suspense } from "react";
-import { FaWhatsapp } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
+import React,{ useState, useEffect,Suspense ,useRef} from "react";
+import { Handler } from "../context/Context";
+
 
 const Intro = (props) => {
+  const { home,Scrollto,contact } = Handler();
+
   const [mandala, setmandala] = useState({
     position: "absolute",
     top: "0px",
@@ -16,7 +18,6 @@ const Intro = (props) => {
     const scroll = props.scroll / 20;
     const opacity = props.scroll / 1000;
 
-    console.log(opacity);
 
     if (props.scroll > 400) {
       setmandala({
@@ -42,11 +43,51 @@ const Intro = (props) => {
       });
     }
   }, [props.scroll]);
+  useEffect(() => {
+    const updateTop = ()=>{ 
+     const rect =home.current.getBoundingClientRect() ;
+    
+     if(    
+      rect.top <= 0 &&
+      rect.bottom >= (window.innerHeight || document.documentElement.clientHeight)
+      ){
+      props.isOn(0)
+    }
+  }
+    window.addEventListener('resize', updateTop);
+    window.addEventListener('scroll', updateTop);
 
+    
+    return () => {
+      window.removeEventListener('resize', updateTop);
+      window.removeEventListener('scroll', updateTop);
+    };
+  }, []);
+
+ 
+  useEffect(() => {
+    const updateTop = ()=>{ 
+     const top = home.current.getBoundingClientRect().top ;
+     const height = Math.round(intro.current.getBoundingClientRect().height )
+
+     if(top < 0 && (top * -1) < height){props.isOn(0)}
+     
+    }
+   
+    window.addEventListener('resize', updateTop);
+    window.addEventListener('scroll', updateTop);
+
+    // Limpia los event listeners cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize',updateTop);
+      window.removeEventListener('scroll',updateTop);
+    };
+  }, []);
+ 
  
   return (
 
-    <div className="select-none bg-gradient-to-t  from-zinc-900/90 via-stone-800/90 to-amber-950/90 flex flex-col items-center w-full sm:h-[650px] h-[980px] overflow-hidden">
+    <div ref={home} className="select-none bg-gradient-to-t  from-zinc-900/90 via-stone-800/90 to-amber-950/90 flex flex-col items-center w-full sm:h-[650px]  overflow-hidden">
       <div className="bg-[url('/sssquiggly.svg')] bg-no-repeat bg-cover bg-center w-full h-full pt-24 sm:pt-1 ">
         <div className="flex flex-col sm:flex-row  sm:justify-between max-w-4xl mt-0 sm:mt-16  mx-auto">
           <div className=" p-8 pr-0 sm:mt-8 z-0 flex justify-between sm:flex-col  ">
@@ -65,6 +106,7 @@ const Intro = (props) => {
               </p>
               <button
                 type="button"
+                onClick={()=>Scrollto(contact)}
                 className="text-white border border-amber-500 bg-slate-800/90 hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-3 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2 mt-2"
               >
                 Reserva clase de prueba
