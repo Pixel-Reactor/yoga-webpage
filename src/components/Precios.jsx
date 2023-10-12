@@ -47,7 +47,7 @@ const Precios = (props) => {
         </div>
        
         <div className="py-10 md:flex md:flex-wrap sm:gap-6   ">
-          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+          <div className="flex flex-col justify-between shadow-amber-800/30 shadow-lg  p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100  dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
             <h3 className="mb-4 text-2xl ">1 Clase por semana</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
             Online
@@ -58,7 +58,7 @@ const Precios = (props) => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+          <div className="flex flex-col justify-between p-6 mx-auto my-5  shadow-amber-800/30 shadow-lg max-w-xs text-center text-gray-900  rounded-lg border border-gray-100  dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
             <h3 className="mb-4 text-2xl ">2 Clases por semana</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
               Online
@@ -76,7 +76,7 @@ const Precios = (props) => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+          <div className="flex flex-col justify-between p-6 mx-auto my-5  shadow-amber-800/30 shadow-lg max-w-xs text-center text-gray-900  rounded-lg border border-gray-100  dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
             <h3 className="mb-4 text-2xl ">3 Clase por semana</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
              Online
@@ -90,7 +90,7 @@ const Precios = (props) => {
 
 
 
-          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+          <div className="flex flex-col justify-between p-6 mx-auto my-5  shadow-amber-800/30 shadow-lg max-w-xs text-center text-gray-900  rounded-lg border border-gray-100  dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
             <h3 className="mb-4 text-2xl ">A DOMICILIO</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
               Clases privadas inviduales o grupales
@@ -104,7 +104,7 @@ const Precios = (props) => {
           </div>
 
 
-          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+          <div className="flex flex-col justify-between p-6 mx-auto my-5  shadow-amber-800/30 shadow-lg max-w-xs text-center text-gray-900  rounded-lg border border-gray-100  dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
             <h3 className="mb-4 text-2xl ">CLASES COLECTIVAS EN <br /> "La Verbena"</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
               Clases privadas inviduales o grupales

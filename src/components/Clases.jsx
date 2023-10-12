@@ -1,4 +1,4 @@
-import React,{useRef,useEffect} from "react";
+import React,{useEffect} from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { BiLinkExternal } from "react-icons/bi";
@@ -107,7 +107,7 @@ const Clases = (props) => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col mt-10 p-6 sm:flex-row text-zinc-50 w-full justify-between">
+          <div className="flex flex-col mt-10 p-6 sm:flex-row sm:gap-4 text-zinc-50 w-full justify-between">
             <div className="sm:mt-16">
               <img
                 src="/img3.png"
@@ -124,8 +124,8 @@ const Clases = (props) => {
                 </span>
               </p>
               <p className=" leading-6 font-extralight text-lg">
-                Opción para aquellos que tengas un horario complicado de compajinar con otras clases o cuando requerimos una atención especial. 
-                Buscaremos lo que mejor se adapte a ti y rofundizaremos en la practica.
+                Opción para aquellos que tengas un horario complicado de compaginar con otras clases o cuando requerimos una atención especial. 
+                Buscaremos lo que mejor se adapte a ti y profundizáremos en la practica.
                 &#40; Hasta dos personas &#41;
               </p>
             </div>

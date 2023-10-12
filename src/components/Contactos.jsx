@@ -1,10 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
-import { Handler } from "../context/Context";
+import React, { useEffect,  useState } from "react";
 
+import { Handler } from "../context/Context";
+import axios from "axios";
 const Contactos = (props) => {
   const { contact } = Handler();
+  const [sending, setsending] = useState(false);
+  const [sendmsg, setsendmsg] = useState({
+    on: false,
+    success: false,
+    text: "",
+  });
   const [message, setMessage] = useState({
     name: "",
     email: "",
@@ -36,18 +41,34 @@ const Contactos = (props) => {
   }, []);
   const handleChange = (e) => {
     setMessage({
-      ...message,[e.target.name]:e.target.value
-    })
-    console.log(message)
+      ...message,
+      [e.target.name]: e.target.value,
+    });
+    console.log(message);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setsending(true);
+    const res = await axios.post(
+      import.meta.env.VITE_API_URL + "/send/form/",
+      message
+    );
+    console.log(res);
+    if (res.status === 200){
+      setsending(false);
+      console.log(res)
+      setsendmsg({on:true,success:true,text:res.data.text})
+    } else {
+      setsending(false);
+      setsendmsg({on:true,success:false,text:res.data.text})
+
+    }
   };
 
   return (
     <div
       ref={contact}
-      className="bg-gradient-to-t dark  from-zinc-900/90 via-stone-800/90 to-amber-950/90  font-[Dosis] "
+      className="bg-gradient-to-t dark relative from-zinc-900/90 via-stone-800/90 to-amber-950/90  font-[Dosis] "
     >
       <div className="bg-[url('/ooorganize.svg')] bg-no-repeat bg-cover bg-center w-full h-full p-10 ">
         <div className="p-6 max-w-xl">
@@ -77,7 +98,6 @@ const Contactos = (props) => {
                 value={message.name}
                 placeholder="tu nombre"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required
               />
             </div>
             <div className="my-6 ">
@@ -114,18 +134,95 @@ const Contactos = (props) => {
                 onChange={handleChange}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Pregunta algo aqui, o dejalo en blanco rellenando el campo email para que me ponga en contacto"
-                required
               />
             </div>
 
             <button
               type="submit"
+              disabled={sending}
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
-              Enviar
+              {sending ? (
+                <>
+                  <div className="flex justify-center items-center gap-3">
+                    <span>Enviando</span>
+                    <div class="sk-chase">
+                      <div class="sk-chase-dot"></div>
+                      <div class="sk-chase-dot"></div>
+                      <div class="sk-chase-dot"></div>
+                      <div class="sk-chase-dot"></div>
+                      <div class="sk-chase-dot"></div>
+                      <div class="sk-chase-dot"></div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                "Enviar"
+              )}
             </button>
           </form>
         </div>
+        {sendmsg.on && (
+          <div
+            id="toast-success"
+            class="flex items-center fixed top-20 left-0 right-0 mx-auto  w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+            role="alert"
+          >
+            {sendmsg.success ? (
+              <div class="inline-flex items-center  justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                </svg>
+                <span class="sr-only">Check icon</span>
+              </div>
+            ) : (
+              <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-orange-500 bg-orange-100 rounded-lg dark:bg-orange-700 dark:text-orange-200">
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM10 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-4a1 1 0 0 1-2 0V6a1 1 0 0 1 2 0v5Z" />
+                </svg>
+                <span class="sr-only">Warning icon</span>
+              </div>
+            )}
+           
+            <div class="ml-3 text-sm font-normal">
+            {sendmsg.text}
+            </div>
+            <button
+              type="button"
+              onClick={() => setsendmsg({ ...sendmsg, on: false })}
+              class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+            >
+              <span class="sr-only">Close</span>
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

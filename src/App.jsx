@@ -6,7 +6,7 @@ import Clases from "./components/Clases.jsx";
 import Precios from "./components/Precios.jsx";
 import Contactos from "./components/Contactos.jsx";
 import Footer from "./components/Footer.jsx";
-import AboutClases from './components/SobreLasClases.jsx'
+import axios from "axios";
 import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
@@ -16,6 +16,13 @@ function App() {
     setscroll(window.scrollY);
   };
   useEffect(() => {
+    
+    const GetVisit = async() =>{
+      const visit =await axios.post(import.meta.env.VITE_API_URL+'/visit');
+      console.log(visit)
+    }
+    GetVisit();
+   
     window.addEventListener("scroll", ScrollListener);
     return () => {
       window.removeEventListener("scroll", ScrollListener);
