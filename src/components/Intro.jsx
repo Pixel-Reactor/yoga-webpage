@@ -118,7 +118,6 @@ const Intro = (props) => {
               src="/mandala.png"
               alt="mandala"
               draggable={false}
-              onLoad={()=>console.log('loaded mandala')}
               style={mandala}
               className={`left-[-40%]  max-w-lg lg:max-w-xl transition-all duration-500  animate-spin-slow opacity-60`}
             /></Suspense>

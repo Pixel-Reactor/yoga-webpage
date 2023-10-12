@@ -19,7 +19,7 @@ function App() {
     
     const GetVisit = async() =>{
       const visit =await axios.post(import.meta.env.VITE_API_URL+'/visit');
-      console.log(visit)
+    
     }
     GetVisit();
    

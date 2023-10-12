@@ -44,7 +44,6 @@ const Contactos = (props) => {
       ...message,
       [e.target.name]: e.target.value,
     });
-    console.log(message);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,15 +52,12 @@ const Contactos = (props) => {
       import.meta.env.VITE_API_URL + "/send/form/",
       message
     );
-    console.log(res);
     if (res.status === 200){
       setsending(false);
-      console.log(res)
       setsendmsg({on:true,success:true,text:res.data.text})
     } else {
       setsending(false);
       setsendmsg({on:true,success:false,text:res.data.text})
-
     }
   };
 
