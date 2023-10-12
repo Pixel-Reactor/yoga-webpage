@@ -7,7 +7,7 @@ const About = (props) => {
     const updateTop = () => {
       const top = about.current.getBoundingClientRect().top;
       const height = Math.round(about.current.getBoundingClientRect().height);
-      
+
       if (top < 0 && top * -1 < height) {
         props.isOn(1);
       }
@@ -31,29 +31,56 @@ const About = (props) => {
       <div className="bg-[url('/llleaves.svg')] bg-no-repeat bg-cover bg-center w-full h-full">
         <div className="max-w-4xl mx-auto ">
           <h1 className="text-sm w-full text-center text-zinc-100 font-[Dosis] flex items-center justify-center gap-2 z-10">
-            Sobre las clases
+            Sobre la Practica
           </h1>
           <h2 className="text-3xl text-center w-full text-zinc-100 font-[Dosis] flex justify-center items-center gap-2 z-10">
             LA PRÁCTICA DEL YOGA
           </h2>
           <div className="flex flex-col sm:flex-row items-center  relative">
             <p className=" font-[Dosis] text-justify sm:p-4 leading-7 font-light rounded-lg mt-10 text-zinc-300 text-xl p-5">
-              Enhorabuena, si ya has llegado aquí es porque estás buscando algo
-              más por tu salud, ya que sea mental o física. Y la buena noticia
-              es que la una va de la mano de la otra, así que tanto si estás
-              buscando recuperarte de una lesión o ganar fuerza y flexibilidad,
-              si buscas desestresarte o distraerte, en tu mundo interior y
-              conocerte más íntimamente, la práctica del yoga puede ser de
-              verdadera ayuda/ el conocimiento de uno mismo a través de la
-              práctica de asanas “posturas” y pranayamas «respiración» y de
-              Dharana “concentración" y Dayana “meditación” es un camino hermoso
-              e infinito. Que requiere la paciencia y disciplina, pero que
-              ofrece verdaderos beneficios que son absolutamente palpables desde
-              la primera clase. Tanto si ya has practicado yoga como si eres
-              recién llegado en este maravilloso mundo, te invito a probar mis
-              clases. Trabajaremos la fuerza, la flexibilidad, el equilibrio
-              apoyado en una respiración consciente y correcta que acompaña el
-              proceso.
+              A través de la práctica de yoga podemos mejorar nuestro estado de
+              salud de manera integral. La búsqueda del equilibrio físico,
+              mental y emocional, son una necesidad cada vez más obvia en este
+              complicado siglo XXI. Tanto si has llegado hasta aquí buscando
+              eliminar el estrés y mejorar tu salud mental, como si has llegado
+              queriendo conseguir fuerza y flexibilidad, o te estás recuperando
+              de una lesión, en el yoga puedes encontrar respuestas. Muchas
+              veces llegamos a nuestra primera clase con unos objetivos
+              concretos, y con el tiempo, no sólo vemos cómo esos objetivos se
+              cumplen sino que vemos multitud de beneficios añadidos. También
+              observamos como las prioridades cambian y progresamos a niveles
+              muy distintos de los que teníamos cuando tomamos contacto por
+              primera vez con el yoga. El cuerpo y la mente se van moldeando de
+              forma mágica, y la sensación de bienestar y gratitud se van
+              haciendo hueco en nuestras vidas, ayudándonos a sobrellevar los
+              buenos y malos momentos. El yoga requiere disciplina, requiere
+              paciencia y el cultivo de características poco habituales hoy día
+              como la ecuanimidad y el desapego. Cuando le dedicamos el tiempo y
+              la actitud necesarios podemos encontrar respuestas. No necesitas
+              la mejor esterilla, ni un cuerpo flexible ni fuerte. Sólo
+              necesitas la actitud y la entrega.
+            </p>
+          </div>
+        </div>
+        <div className="max-w-4xl mx-auto ">
+          <h1 className="text-sm w-full text-center text-zinc-100 font-[Dosis] flex items-center justify-center gap-2 z-10">
+            Sobre las clases
+          </h1>
+          <h2 className="text-3xl text-center w-full text-zinc-100 font-[Dosis] flex justify-center items-center gap-2 z-10">
+            LAS CLASES 
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center  relative">
+            <p className=" font-[Dosis] text-justify sm:p-4 leading-7 font-light rounded-lg mt-10 text-zinc-300 text-xl p-5">
+              En las clases trabajaremos de manera progresiva y adaptada a tu
+              nivel. En cada clase nos enfocaremos en diferentes puntos,
+              buscando liberar y fortalecer el cuerpo en su totalidad.
+              Empezaremos calentando el cuerpo y entrando en la práctica con
+              unos saludos al sol. Después, enfocaremos las asanas (posturas) al
+              objetivo de este día y terminaremos con una deliciosa relajación
+              guiada en savasana. En las clases de una hora y cuarto incluiremos
+              también el trabajo energético con pranayamas, donde veremos poco a
+              poco diferentes maneras de controlar y enfocar la energía con la
+              respiración.
             </p>
           </div>
         </div>

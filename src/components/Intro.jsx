@@ -68,7 +68,7 @@ const Intro = (props) => {
   useEffect(() => {
     const updateTop = ()=>{ 
      const top = home.current.getBoundingClientRect().top ;
-     const height = Math.round(intro.current.getBoundingClientRect().height )
+     const height = Math.round(home.current.getBoundingClientRect().height )
 
      if(top < 0 && (top * -1) < height){props.isOn(0)}
      
@@ -99,9 +99,7 @@ const Intro = (props) => {
                 YOGA CON HELE
               </h2>
               <p className="leading-7 max-w-xs  font-[dosis] mt-3 text-zinc-200  font-normal ">
-                Si  estás buscando
-                algo más por tu salud, ya que sea mental o física, 
-                estás buscando recuperarte de una lesión o ganar fuerza
+              Conócete y profundiza en tí  a través de esta maravillosa práctica milenaria que ofrece multitud de beneficios absolutamente palpables desde la primera clase.
                 
               </p>
               <button

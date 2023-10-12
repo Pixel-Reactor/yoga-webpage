@@ -6,6 +6,7 @@ import Clases from "./components/Clases.jsx";
 import Precios from "./components/Precios.jsx";
 import Contactos from "./components/Contactos.jsx";
 import Footer from "./components/Footer.jsx";
+import AboutClases from './components/SobreLasClases.jsx'
 import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="dark min-h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black via-zinc-300 to-black  ">
+    <div className="dark min-h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black via-zinc-300 to-black w-full ">
       <Header scroll={scroll} sectionOn={section} />
       <div className=" fixed right-4 p-0 bottom-10 z-50 bg-green-900/80 border-2 border-amber-700/30 rounded-full">
         <a href="https://wa.me/34744457548" target="_blank">
@@ -38,9 +39,12 @@ function App() {
       <Clases isOn={setsection} />
       <div className="  bg-gradient-to-t from-amber-950/90 via-stone-900/90 to-zinc-900/90 h-32"></div>
 
+     
+
       <Precios isOn={setsection} />
       <div className="  bg-gradient-to-t from-amber-950/90 via-stone-900/90 to-zinc-900/90 h-32"></div>
 
+     
       <Contactos isOn={setsection} />
       <Footer />
     </div>

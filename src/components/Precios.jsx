@@ -46,41 +46,74 @@ const Precios = (props) => {
           </p>
         </div>
        
-        <div className="py-10 md:flex  sm:gap-6   ">
-          <div className="flex flex-col  p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+        <div className="py-10 md:flex md:flex-wrap sm:gap-6   ">
+          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
             <h3 className="mb-4 text-2xl ">1 Clase por semana</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-              Best option for personal .
+            Online
             </p>
             <div className="flex justify-center items-baseline my-8">
-              <span className="mr-2 text-5xl ">€29</span>
-              <span className="text-gray-500 dark:text-gray-400">/month</span>
+              <span className="mr-2 text-5xl ">€30</span>
+              <span className="text-gray-500 dark:text-gray-400">/mes</span>
             </div>
           </div>
 
-          <div className="flex flex-col  p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
             <h3 className="mb-4 text-2xl ">2 Clases por semana</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-              Relevant for multiple users
+              Online
+            </p>
+            <p className="font-light text-gray-200 sm:text-lg dark:text-gray-200">
+              La opción más elegida
             </p>
             <div className="flex justify-center items-baseline my-8">
-              <span className="mr-2 text-5xl font-extrabold">€99</span>
+              <span className="mr-2 text-5xl">€40</span>
               <span
                 className="text-gray-500 dark:text-gray-400"
               >
-                /month
+                /mes
               </span>
             </div>
           </div>
 
-          <div className="flex flex-col  p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
-            <h3 className="mb-4 text-2xl ">Privadas</h3>
+          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+            <h3 className="mb-4 text-2xl ">3 Clase por semana</h3>
+            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+             Online
+            </p>
+            <div className="flex justify-center items-baseline my-8">
+              <span className="mr-2 text-5xl ">€50</span>
+              <span className="text-gray-500 dark:text-gray-400">/mes</span>
+            </div>
+          </div>
+      
+
+
+
+          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+            <h3 className="mb-4 text-2xl ">A DOMICILIO</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
               Clases privadas inviduales o grupales
             </p>
             <div className="flex justify-center items-baseline my-8">
-              <span className="mr-2 text-5xl ">€499</span>
-              <span className="text-gray-500 dark:text-gray-400">/month</span>
+            <span className="mr-2 text-2xl ">desde</span>
+              <span className="mr-2 text-5xl ">€20</span>
+              <span className="text-gray-500 dark:text-gray-400">/sesión</span>
+              
+            </div>
+          </div>
+
+
+          <div className="flex flex-col justify-between p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+            <h3 className="mb-4 text-2xl ">CLASES COLECTIVAS EN <br /> "La Verbena"</h3>
+            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+              Clases privadas inviduales o grupales
+            </p>
+            <div className="flex justify-center items-baseline my-8">
+            <span className="mr-2 text-2xl ">desde</span>
+              <span className="mr-2 text-5xl ">€20</span>
+              <span className="text-gray-500 dark:text-gray-400">/sesión</span>
+              
             </div>
           </div>
         </div>
