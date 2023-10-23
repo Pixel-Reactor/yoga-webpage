@@ -1,6 +1,6 @@
 # React + Vite Yoga WebPage
 
-This website is a yoga template designed by matteo stella (pixel-reactor.com)
+This website is a yoga template designed by matteo stella (pixel-reactor.com) with react , vite and tailwind css
 
 ## Visit Count 
 this website send a request to an express server to manage a count of anonimous visits everytime the page is open.
