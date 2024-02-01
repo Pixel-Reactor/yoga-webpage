@@ -47,7 +47,7 @@ const Precios = (props) => {
         </div>
        
         <div className="py-10 md:flex md:flex-wrap sm:gap-6   ">
-          <div className="flex flex-col justify-between shadow-amber-800/60 shadow-xl  p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border-2 border-zinc-50  dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+          <div className="flex flex-col min-w-[300px] justify-between shadow-amber-800/60 shadow-xl  p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border-2 border-zinc-50  dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
           <h3 className="mb-4 text-2xl ">ONLINE</h3>
           <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200">
             1 clase por semana
@@ -82,7 +82,7 @@ const Precios = (props) => {
           </div>
 
 
-          <div  className="flex flex-col justify-between shadow-amber-800/60 shadow-xl  p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border-2 border-zinc-50  dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
+          <div  className="flex flex-col min-w-[300px] justify-between shadow-amber-800/60 shadow-xl  p-6 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-lg border-2 border-zinc-50  dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
             <h3 className="mb-4 text-2xl ">CLASES COLECTIVAS EN <br /> "La Verbena"</h3>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200">
             1 clase a la semana
