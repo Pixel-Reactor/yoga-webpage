@@ -1,8 +1,16 @@
-# React + Vite
+# React + Vite Yoga WebPage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website is a yoga template designed by matteo stella (pixel-reactor.com) with react , vite and tailwind css
 
-Currently, two official plugins are available:
+## Visit Count 
+this website send a request to an express server to manage a count of anonimous visits everytime the page is open.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Section and navigating 
+
+an interesting thing about every section component is that each one is constantly getting his position on the page.
+as result the ref to each one is dinamic and also the navbar is always aware on wich section is beeing shown in the viewport
+
+## Contact Form 
+
+The form is controlled by an node express server that store the email and text sended by the user and send a confirmation email to the user that sent a message.
