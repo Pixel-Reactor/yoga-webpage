@@ -37,7 +37,7 @@ const About = (props) => {
             LA PRÁCTICA DEL YOGA
           </h2>
           <div className="flex flex-col sm:flex-row items-center  relative">
-            <p className=" font-[Dosis] text-justify sm:p-4 leading-7 font-light rounded-lg mt-10 text-zinc-300 text-xl p-5">
+            <p className=" font-[Dosis]  sm:p-4 leading-7 font-light rounded-lg mt-10 text-zinc-300 text-lg p-5">
               A través de la práctica de yoga podemos mejorar nuestro estado de
               salud de manera integral. La búsqueda del equilibrio físico,
               mental y emocional, son una necesidad cada vez más obvia en este
