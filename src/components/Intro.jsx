@@ -87,7 +87,7 @@ const Intro = (props) => {
  
   return (
 
-    <div ref={home} className="select-none bg-gradient-to-t  from-zinc-900/90 via-stone-800/90 to-amber-950/90 flex flex-col items-center w-full sm:h-[650px]  overflow-hidden">
+    <section ref={home} className="select-none bg-gradient-to-t  from-zinc-900/90 via-stone-800/90 to-amber-950/90 flex flex-col items-center w-full sm:h-[650px]  overflow-hidden">
       <div className="bg-[url('/sssquiggly.svg')] bg-no-repeat bg-cover bg-center w-full h-full pt-24 sm:pt-1 ">
         <div className="flex flex-col sm:flex-row  sm:justify-between max-w-4xl mt-0 sm:mt-16  mx-auto">
           <div className=" p-8 pr-0 sm:mt-8 z-0 flex justify-between sm:flex-col  ">
@@ -131,7 +131,7 @@ const Intro = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -64,12 +64,12 @@ const Contactos = (props) => {
   return (
     <div
       ref={contact}
-      className="bg-gradient-to-t dark relative from-zinc-900/90 via-stone-800/90 to-amber-950/90  font-[Dosis] "
+      className="bg-gradient-to-t dark relative from-zinc-900/90 via-stone-800/90 to-amber-950/90  font-[Dosis]  "
     >
       <div className="bg-[url('/ooorganize.svg')] bg-no-repeat bg-cover bg-center w-full h-full p-10 ">
-        <div className="p-6 max-w-xl">
+        <div className="p-6 max-w-xl mx-auto">
           <div className="text-4xl tracking-tight text-justify text-gray-900 dark:text-white">
-            <h4 className="my-3 text-center md:text-left">Te Animas?</h4>
+            <h4 className="my-3 text-center ">Te Animas?</h4>
             <p className="text-lg text-center  font-light text-gray-500 sm:text-xl dark:text-gray-400">
               ¿ Estás preparad@ para empezar? <br />
               ¿ tienes alguna pregunta? <br /> no dudes en contactar conmigo!{" "}

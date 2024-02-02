@@ -61,7 +61,7 @@ const Clases = (props) => {
               <p className="  text-2xl">PRESENCIAL</p>
               <p className=" leading-6 font-extralight text-lg">
                 <span className="flex gap-2 items-center">
-                  <AiOutlineCalendar /> Todos los Miércoles{" "}
+                  <AiOutlineCalendar /> Todos los Lunes y  Miércoles{" "}
                 </span>
                 <span className="flex gap-2 items-center">
                   <GoLocation /> La Verbena <br />
