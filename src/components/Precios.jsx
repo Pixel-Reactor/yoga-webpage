@@ -58,7 +58,7 @@ const Precios = (props) => {
               <span className="text-gray-500 dark:text-gray-400">/mes</span>
             </div>
             <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200">
-            1 clase por semana
+            2 clases por semana
             </p>
           
             <div className="flex justify-center items-baseline my-8">
