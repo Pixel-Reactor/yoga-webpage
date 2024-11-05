@@ -7,9 +7,12 @@
 .flip{
   transform: rotateY(180deg);
 }
-
-
-
+.text-shadow-w-s{
+  text-shadow: 0.5px 0.5px  5px rgb(255, 255, 255);
+}
+.text-shadow-w-xs{
+  text-shadow: 0.5px 0.5px  3px rgb(255, 255, 255);
+}
 .sk-chase {
   width: 20px;
   height: 20px;

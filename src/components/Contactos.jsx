@@ -69,12 +69,12 @@ const Contactos = (props) => {
       <div className="bg-[url('/ooorganize.svg')] bg-no-repeat bg-cover bg-center w-full h-full p-10 ">
         <div className="p-6 max-w-xl mx-auto">
           <div className="text-4xl tracking-tight text-justify text-gray-900 dark:text-white">
-            <h4 className="my-3 text-center ">Te Animas?</h4>
-            <p className="text-lg text-center  font-light text-gray-500 sm:text-xl dark:text-gray-400">
+            <h4 className="my-3 text-center text-shadow-w-xs ">¿Te Animas?</h4>
+            <p className="text-lg text-center  font-light text-gray-500 sm:text-xl dark:text-gray-200">
               ¿ Estás preparad@ para empezar? <br />
-              ¿ tienes alguna pregunta? <br /> no dudes en contactar conmigo!{" "}
+              ¿ Tienes alguna pregunta? <br /> ¡ No dudes en contactar conmigo !{" "}
               <br />
-              utiliza el botón abajo para Whats'App o rellena el formulario.
+              Utiliza el botón abajo para <span className="font-semibold">Whats'App</span>, <span className="font-semibold">Instagram</span>  o rellena el formulario .
             </p>
           </div>
 
@@ -101,7 +101,7 @@ const Contactos = (props) => {
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Correo electronico
+                Correo electrónico
               </label>
               <input
                 type="email"

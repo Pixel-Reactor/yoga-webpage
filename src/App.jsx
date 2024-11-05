@@ -7,7 +7,7 @@ import Precios from "./components/Precios.jsx";
 import Contactos from "./components/Contactos.jsx";
 import Footer from "./components/Footer.jsx";
 import axios from "axios";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp ,FaInstagram} from "react-icons/fa";
 
 function App() {
   const [scroll, setscroll] = useState(Number);
@@ -35,6 +35,11 @@ function App() {
       <div className=" fixed right-4 p-0 bottom-10 z-50 bg-green-900/80 border-2 border-amber-700/30 rounded-full">
         <a href="https://wa.me/34744457548" target="_blank">
           <FaWhatsapp className="text-white m-3 " size={30} />
+        </a>
+      </div>
+      <div className=" fixed right-4 p-0 bottom-28 z-50 bg-pink-500/80 border-2 border-white-900/30 rounded-full">
+        <a href="https://www.instagram.com/yogaconhele/" target="_blank">
+          <FaInstagram className="text-white m-3 " size={30} />
         </a>
       </div>
 

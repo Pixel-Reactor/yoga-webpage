@@ -30,10 +30,10 @@ const About = (props) => {
     >
       <div className="bg-[url('/llleaves.svg')] bg-no-repeat bg-cover bg-center w-full h-full">
         <div className="max-w-4xl mx-auto ">
-          <h1 className="text-sm w-full text-center text-zinc-100 font-[Dosis] flex items-center justify-center gap-2 z-10">
-            Sobre la Practica
+          <h1 className="text-sm w-full text-center text-zinc-100 font-[Dosis] flex items-center justify-center gap-2 z-10 my-2">
+            Sobre la Práctica
           </h1>
-          <h2 className="text-3xl text-center w-full text-zinc-100 font-[Dosis] flex justify-center items-center gap-2 z-10">
+          <h2 className="text-3xl text-shadow-w-xs text-center w-full text-zinc-100 font-[Dosis] flex justify-center items-center gap-2 z-10">
             LA PRÁCTICA DEL YOGA
           </h2>
           <div className="flex flex-col sm:flex-row items-center  relative">
@@ -63,10 +63,10 @@ const About = (props) => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto ">
-          <h1 className="text-sm w-full text-center text-zinc-100 font-[Dosis] flex items-center justify-center gap-2 z-10">
+          <h1 className="text-sm w-full text-center text-zinc-100 font-[Dosis] flex items-center justify-center gap-2 z-10 my-2">
             Sobre las clases
           </h1>
-          <h2 className="text-3xl text-center w-full text-zinc-100 font-[Dosis] flex justify-center items-center gap-2 z-10">
+          <h2 className="text-3xl text-shadow-w-xs text-center w-full text-zinc-100 font-[Dosis] flex justify-center items-center gap-2 z-10">
             LAS CLASES 
           </h2>
           <div className="flex flex-col sm:flex-row items-center  relative">
