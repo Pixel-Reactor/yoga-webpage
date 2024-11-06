@@ -101,8 +101,8 @@ const Clases = (props) => {
             </div>
             <div className="h-full flex items-left flex-col mt-6 justify-center sm:mt-6 gap-3 max-w-sm ">
               <p className="font-[Dosis]  text-2xl text-shadow-w-s">ONLINE</p>
-              <span className="flex gap-2 items-center  leading-6  text-lg font-semibold">
-                <AiOutlineCalendar size={25} /> Martes - Jueves{" "}
+              <span className="flex gap-2 items-center  leading-6  text-lg ">
+                <AiOutlineCalendar size={25} />Tardes : <span className="font-semibold">Martes y Jueves a las las 19:30h</span>
               </span>
               <p className=" leading-6 font-extralight text-lg">
                 Clases online en grupos reducidos para poder atenderte y acompañarte de la mejor manera posible.
@@ -127,7 +127,7 @@ const Clases = (props) => {
                 Buscaremos lo que mejor se adapte a ti y profundizaremos en la práctica.
                 <br />
                 <br />
-                <span className="font-semibold"> &#40; Hasta dos personas &#41;</span>
+                <span className="font-semibold"> &#40; Hasta 4 personas &#41;</span>
               </p>
             </div>
           </div>
