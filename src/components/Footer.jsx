@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='bg-zinc-900/90 text-zinc-50/80 p-1 py-3 pb-10 flex flex-col items-center font-[Dosis]'>
+    <div className='bg-zinc-900/90 text-zinc-50/80 p-1 py-3 py-10 flex flex-col items-center font-[Dosis] border border-zinc-50/20'>
       <div className='flex items-center gap-2'>  
       <img src="/logo.png" alt="logo" className='w-12 mb-2 sm:m-4' />
      

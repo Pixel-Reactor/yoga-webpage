@@ -29,8 +29,8 @@ const Clases = (props) => {
   }, []);
   return (
     <div ref={classes} className=" h-full bg-gradient-to-t flex justify-center from-zinc-900/90 via-stone-800/90 to-amber-950/90  overflow-hidden py-10 ">
-      <div className="bg-[url('/llleaves.svg')] font-[dosis] bg-no-repeat bg-cover bg-center w-full h-full p-6">
-        <div className="max-w-5xl mx-auto">
+      <div className="bg-[url('/llleaves.svg')] font-[dosis] bg-no-repeat bg-cover bg-center w-full h-full p-2">
+        <div className="max-w-5xl mx-auto  w-full">
           <h3 className="text-sm text-zinc-100 font-[Dosis] flex items-center gap-2 z-10">
             TODOS LOS NIVELES
           </h3>
@@ -49,7 +49,7 @@ const Clases = (props) => {
               height="280px"
             />
           </div>
-          <div className="flex flex-col mt-10 p-6 sm:flex-row text-zinc-50 w-full justify-between">
+          <div className="flex flex-col  py-6 sm:flex-row sm:items-center text-zinc-50 w-full justify-between ">
             <div>
               <img
                 src="/presencial.png"
@@ -57,24 +57,39 @@ const Clases = (props) => {
                 className="min-w-[18rem] max-w-xs drop-shadow-2xl"
               />
             </div>
-            <div className="h-full flex gap-3 items-left flex-col mt-6 justify-center sm:mt-20 max-w-sm ">
-              <p className="  text-2xl text-shadow-w-s">PRESENCIAL</p>
-              <p className=" leading-6 font-extralight text-lg">
-                <span className="flex gap-2 items-center">
-                  <AiOutlineCalendar size={25} />Mañanas : <span className="font-semibold">Miércoles a las 10:00h</span>
+            <div className="h-full flex gap-4 items-start flex-col justify-center   mt-5 sm:mt-0 max-w-md  ">
+              <p className="  text-2xl text-shadow-w-s underline underline-offset-4">PRESENCIAL</p>
+              <p className=" leading-6 font-extralight text-lg  flex flex-col gap-6">
+                <span className="flex gap-2 items-center justify-between">
+                  <span className="flex flex-col items-center sm:flex-row sm:gap-3  w-20 sm:w-44">
+                    <AiOutlineCalendar size={25} />
+                    <span>Mañanas</span>
+                  </span>
+                  <span className="flex flex-col items-start">
+                    <span className="font-semibold">Miércoles a las 10:00h</span>
+                    <span className="font-semibold">Sábados a las 10:30h</span></span>
                 </span>
-                <span className="flex gap-2 items-center">
-                  <AiOutlineCalendar size={25} />Tardes : <span className="font-semibold">Lunes y Miércoles a las 18:30h</span>
+                <span className="flex gap-2 items-center justify-between">
+                  <span className="flex flex-col items-center sm:flex-row sm:gap-3  w-20 sm:w-44">
+                    <AiOutlineCalendar size={25} />
+                    <span>Tardes</span>
+                  </span>
+
+                  <span className="font-semibold">Lunes, Miércoles - 18:30h</span>
                 </span>
-                <span className="flex gap-2 items-center">
-                  <GoLocation size={25} /> La Verbena <br />
-                  Calle Juan Zofio 49,28026 Madrid
+                <span className="flex gap-2 items-center justify-between">
+                  <span className="w-28 sm:w-20 flex items-center  justify-center sm:justify-start "> 
+                    <GoLocation size={25} />
+                    </span>
+                  <span className="text-right">La Verbena
+                    Calle Juan Zofio 49,28026 Madrid
+                    </span>
                 </span>
                 <a
                   href="https://maps.app.goo.gl/sgm1rB51J7czscD38"
                   target="_blank"
                 >
-                  <button className="mt-5 w-full shadow-sm shadow-white/50 max-w-s text-center flex justify-center items-center gap-2 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                  <button className="w-full shadow-sm shadow-white/50 max-w-sm text-center flex justify-center items-center gap-2 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                     <span>
                       <BiLinkExternal size={25} />
                     </span>{" "}
@@ -84,25 +99,29 @@ const Clases = (props) => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col mt-10 p-6 sm:flex-row-reverse text-zinc-50 w-full justify-between">
-            <div className="relative flex items-center justify-center">
+          <div className="flex flex-col mt-10 p-6 sm:flex-row-reverse sm:items-center text-zinc-50 w-full justify-between">
+            <div className="relative flex items-center justify-center max-w-[300px] min-w-[300px] max-h-[200px] min-h-[200px] ">
               <img
                 src="/laptop.png"
                 alt="presencial"
                 loading="lazy"
-                className=" max-w-xs w-[300px] h-[200px] object-contain drop-shadow-2xl"
+                className="  max-w-[300px] min-w-[300px] max-h-[200px] min-h-[200px]  object-contain drop-shadow-2xl"
               />
               <img
                 src="/helebg.jpg"
                 alt="presencial"
                 loading="lazy"
-                className=" w-[234px] rounded-sm h-[149px] top-[20px]  object-cover absolute"
+                className=" w-[234px] rounded-sm h-[149px] top-[20px]   object-cover absolute"
               />
             </div>
             <div className="h-full flex items-left flex-col mt-6 justify-center sm:mt-6 gap-3 max-w-sm ">
-              <p className="font-[Dosis]  text-2xl text-shadow-w-s">ONLINE</p>
-              <span className="flex gap-2 items-center  leading-6  text-lg ">
-                <AiOutlineCalendar size={25} />Tardes : <span className="font-semibold">Martes y Jueves a las las 19:30h</span>
+              <p className="font-[Dosis]  text-2xl text-shadow-w-s underline underline-offset-4">ONLINE</p>
+              <span className="flex gap-2 items-center  leading-6  justify-between text-lg ">
+                <span className="flex flex-col items-center sm:flex-row sm:gap-3  w-20 sm:w-44">
+                  <AiOutlineCalendar size={25} />
+                   <span>Tardes </span>
+                   </span>
+                   <span className="font-semibold text-right">Martes y Jueves a las las 19:30h</span>
               </span>
               <p className=" leading-6 font-extralight text-lg">
                 Clases online en grupos reducidos para poder atenderte y acompañarte de la mejor manera posible.
@@ -120,8 +139,8 @@ const Clases = (props) => {
               />
             </div>
             <div className="h-full flex gap-3 items-left  flex-col mt-6 justify-center sm:mt-20 max-w-sm  ">
-              <p className="font-[Dosis]  text-2xl text-shadow-w-s">PRIVADAS</p>
-            
+              <p className="font-[Dosis]  text-2xl text-shadow-w-s underline underline-offset-4">PRIVADAS</p>
+
               <p className=" leading-6 font-extralight text-lg">
                 Opción para aquellos que tengan un horario complicado de compaginar con otras clases o que requieran atención especial.
                 Buscaremos lo que mejor se adapte a ti y profundizaremos en la práctica.

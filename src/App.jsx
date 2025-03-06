@@ -30,15 +30,17 @@ function App() {
   }, []);
 
   return (
-    <div className="dark min-h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black via-zinc-300 to-black w-full ">
+    <div className="dark min-h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black via-zinc-300 to-black w-full overflow-hidden ">
       <Header scroll={scroll} sectionOn={section} />
-      <div className=" fixed right-4 p-0 bottom-10 z-50 bg-green-900/80 border-2 border-amber-700/30 rounded-full">
+      <div className=" fixed right-4 p-0 bottom-24 z-50 bg-green-900/80 border-2 border-amber-700/30 rounded-full shadow-md shadow-green-500">
         <a href="https://wa.me/34744457548" target="_blank">
           <FaWhatsapp className="text-white m-3 " size={30} />
         </a>
       </div>
-      <div className=" fixed right-4 p-0 bottom-28 z-50 bg-pink-500/80 border-2 border-white-900/30 rounded-full">
-        <a href="https://www.instagram.com/yogaconhele/" target="_blank">
+      <div className=" fixed right-4 p-0 bottom-44 z-50 bg-pink-500/80 border-2 border-white-900/30 rounded-full shadow-md shadow-pink-500">
+        <a
+        className="shadow-inner "
+        href="https://www.instagram.com/yogaconhele/" target="_blank">
           <FaInstagram className="text-white m-3 " size={30} />
         </a>
       </div>
