@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import{ useEffect, useState } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { BiLinkExternal } from "react-icons/bi";
@@ -6,6 +6,24 @@ import { Handler } from "../context/Context";
 
 const Clases = (props) => {
   const { classes } = Handler();
+    const [ubicacion, setUbicacion] = useState("USERA"); 
+
+const datos = {
+    USERA: {
+      mañanas: ["Sábados a las 10:30h"],
+      tardes: ["Lunes, Miércoles - 18:30h"],
+      direccion: "La Verbena, Calle Juan Zofio 49, 28026 Madrid",
+      mapsLink: "https://maps.app.goo.gl/sgm1rB51J7czscD38",
+    },
+    PIRAMIDES: {
+
+      tardes: ["Miércoles - 20:30h"],
+      direccion: "Paso, P.º de Juan Antonio Vallejo-Nájera Botas, 25, 28005 Madrid",
+      mapsLink: "https://maps.app.goo.gl/ukBmjkLSFVtcYLxz7",
+    },
+  };
+
+    const info = datos[ubicacion];
 
   useEffect(() => {
     const updateTop = (ref) => {
@@ -57,47 +75,63 @@ const Clases = (props) => {
                 className="min-w-[18rem] max-w-xs drop-shadow-2xl"
               />
             </div>
-            <div className="h-full flex gap-4 items-start flex-col justify-center   mt-5 sm:mt-0 max-w-md  ">
-              <p className="  text-2xl text-shadow-w-s underline underline-offset-4">PRESENCIAL</p>
-              <p className=" leading-6 font-extralight text-lg  flex flex-col gap-6">
-                <span className="flex gap-2 items-center justify-between">
-                  <span className="flex flex-col items-center sm:flex-row sm:gap-3  w-20 sm:w-44">
-                    <AiOutlineCalendar size={25} />
-                    <span>Mañanas</span>
-                  </span>
-                  <span className="flex flex-col items-start">
-                    <span className="font-semibold">Miércoles a las 10:00h</span>
-                    <span className="font-semibold">Sábados a las 10:30h</span></span>
-                </span>
-                <span className="flex gap-2 items-center justify-between">
-                  <span className="flex flex-col items-center sm:flex-row sm:gap-3  w-20 sm:w-44">
-                    <AiOutlineCalendar size={25} />
-                    <span>Tardes</span>
-                  </span>
+           <div className="h-full flex gap-4 items-start flex-col justify-center mt-5 sm:mt-0 max-w-md">
+        <p className="text-2xl text-shadow-w-s underline underline-offset-4">
+          PRESENCIAL
+        </p>
+         <div className="flex  mt-4 w-full  rounded-lg ">
+          {Object.keys(datos).map((loc) => (
+            <button
+              key={loc}
+              className={`px-4 py-2 rounded-sm w-full ${
+                ubicacion === loc ? "bg-amber-400 text-black" : "bg-zinc-700"
+              }`}
+              onClick={() => setUbicacion(loc)}
+            >
+              {loc}
+            </button>
+          ))}
+        </div>
+        <p className="leading-6 font-extralight text-lg flex flex-col gap-6 transition-all duration-300">
+         
+         {info.mañanas &&  <span className="flex gap-2 items-center justify-between">
+            <span className="flex flex-col items-center sm:flex-row sm:gap-3 w-20 sm:w-44">
+              <AiOutlineCalendar size={25} />
+              <span>Mañanas</span>
+            </span>
+            <span className="flex flex-col items-start font-semibold">
+              {info.mañanas?.map((hora, i) => (
+                <span key={i}>{hora}</span>
+              ))}
+            </span>
+          </span>}
 
-                  <span className="font-semibold">Lunes, Miércoles - 18:30h</span>
-                </span>
-                <span className="flex gap-2 items-center justify-between">
-                  <span className="w-28 sm:w-20 flex items-center  justify-center sm:justify-start "> 
-                    <GoLocation size={25} />
-                    </span>
-                  <span className="text-right">La Verbena
-                    Calle Juan Zofio 49,28026 Madrid
-                    </span>
-                </span>
-                <a
-                  href="https://maps.app.goo.gl/sgm1rB51J7czscD38"
-                  target="_blank"
-                >
-                  <button className="w-full shadow-sm shadow-white/50 max-w-sm text-center flex justify-center items-center gap-2 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                    <span>
-                      <BiLinkExternal size={25} />
-                    </span>{" "}
-                    Abrir en Google Maps
-                  </button>
-                </a>
-              </p>
-            </div>
+      
+          <span className="flex gap-2 items-center justify-between">
+            <span className="flex flex-col items-center sm:flex-row sm:gap-3 w-20 sm:w-44">
+              <AiOutlineCalendar size={25} />
+              <span>Tardes</span>
+            </span>
+            <span className="font-semibold">{info.tardes.join(", ")}</span>
+          </span>
+
+       
+          <span className="flex gap-2 items-center justify-between">
+            <span className="w-24 sm:w-20 flex items-center justify-center sm:justify-start ">
+              <GoLocation size={25} />
+            </span>
+            <span className="text-right">{info.direccion}</span>
+          </span>
+
+          <a href={info.mapsLink} target="_blank" rel="noopener noreferrer">
+            <button className="w-full shadow-sm shadow-white/50 max-w-sm text-center flex justify-center items-center gap-2 py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+              <BiLinkExternal size={25} />
+              Abrir en Google Maps
+            </button>
+          </a>
+        </p>
+         </div>
+
           </div>
           <div className="flex flex-col mt-10 p-6 sm:flex-row-reverse sm:items-center text-zinc-50 w-full justify-between">
             <div className="relative flex items-center justify-center max-w-[300px] min-w-[300px] max-h-[200px] min-h-[200px] ">

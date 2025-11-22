@@ -1,10 +1,21 @@
-import React,{useEffect,useRef} from "react";
+import React,{useEffect, useState} from "react";
 import { Handler } from "../context/Context";
 
 const Precios = (props) => {
   const { prices } = Handler();
 
-  
+  const [sitio, setSitio] = useState("La Verbena");
+
+  const precios = {
+    "La Verbena": [
+      { clases: "1 clase a la semana", precio: 35 },
+      { clases: "2 clases a la semana", precio: 50 },
+      { clases: "3 clases a la semana", precio: 70 },
+    ],
+    "Pirámides": [
+      { clases: "1 clase a la semana", precio: 45 },
+    ],
+  };
   useEffect(() => {
     const updateTop = (ref)=>{ 
       const rect = prices.current.getBoundingClientRect() ;
@@ -46,7 +57,44 @@ const Precios = (props) => {
         </div>
        
         <div className="py-10 md:flex md:flex-wrap sm:gap-6   ">
-      
+         <div className="flex flex-col hover:scale-105 transition-all min-w-[300px] justify-between shadow-amber-800/60 shadow-xl p-4 mx-auto my-5 max-w-xs text-center rounded-xl border-2 border-zinc-50 dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80 dark:text-white">
+        <div className="border w-full border-zinc-100/60 border-dashed shadow-xs h-full shadow-white p-2 rounded-md flex flex-col gap-5">
+          <div className="flex flex-col items-center gap-4">
+      <div className="flex w-full justify-center ">
+        {Object.keys(precios).map((s) => (
+          <button
+            key={s}
+            className={`px-4 py-2 rounded font-semibold transition-all w-full ${
+              sitio === s
+                ? "bg-amber-400 text-black shadow-lg"
+                : "bg-zinc-700 text-white hover:bg-amber-500/80"
+            }`}
+            onClick={() => setSitio(s)}
+          >
+            {s}
+          </button>
+        ))}
+      </div>
+
+    </div>
+          <h3 className=" text-2xl font-bold ">
+            CLASES COLECTIVAS EN <br />
+            "{sitio}"
+          </h3>
+
+          {precios[sitio].map((item, index) => (
+            <div key={index}>
+              <p className="font-light  text-gray-500 sm:text-lg dark:text-gray-200">
+                {item.clases}
+              </p>
+              <div className="flex justify-center items-baseline my-1">
+                <span className="mr-2 text-5xl font-semibold">€{item.precio}</span>
+                <span className="text-gray-500 dark:text-gray-400">/mes</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
           <div className="hover:scale-105 transition-all flex flex-col min-w-[300px] justify-between shadow-amber-800/60 shadow-xl  p-2 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-xl border-2 border-zinc-50  dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
           <div className="border border-zinc-100/60 border-dashed shadow-xs shadow-white p-2 rounded-md w-full h-full ">
           <h3 className="my-4 text-2xl ">ONLINE</h3>
@@ -87,39 +135,6 @@ const Precios = (props) => {
          </div>
 
 
-          <div  className="flex flex-col hover:scale-105 transition-all min-w-[300px] justify-between shadow-amber-800/60 shadow-xl  p-2 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-xl border-2 border-zinc-50  dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
-          <div className="border w-full h-full border-zinc-100/60 border-dashed shadow-xs shadow-white p-2 rounded-md">
-
-            <h3 className="my-4 text-2xl ">CLASES COLECTIVAS EN <br /> "La Verbena"</h3>
-            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200">
-            1 clase a la semana
-            </p>
-            <div className="flex justify-center items-baseline my-1">
-        
-              <span className="mr-2 text-5xl ">€35</span>
-              <span className="text-gray-500 dark:text-gray-400">/més</span>
-              
-            </div>
-            <p className="font-light mt-5 text-gray-500 sm:text-lg dark:text-gray-200">
-            2 clases a la semana
-            </p>
-            <div className="flex justify-center items-baseline my-1">
-        
-              <span className="mr-2 text-5xl ">€50</span>
-              <span className="text-gray-500 dark:text-gray-400">/més</span>
-              
-              </div>
-              <p className="font-light mt-5 text-gray-500 sm:text-lg dark:text-gray-200">
-            3 clases a la semana
-            </p>
-            <div className="flex justify-center items-baseline my-1">
-        
-              <span className="mr-2 text-5xl ">€70</span>
-              <span className="text-gray-500 dark:text-gray-400">/més</span>
-              
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
