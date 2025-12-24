@@ -8,9 +8,9 @@ const Precios = (props) => {
 
   const precios = {
     "La Verbena": [
-      { clases: "1 clase a la semana", precio: 35 },
-      { clases: "2 clases a la semana", precio: 50 },
-      { clases: "3 clases a la semana", precio: 70 },
+      { clases: "1 clase a la semana", precio: 40 },
+      { clases: "2 clases a la semana", precio: 55 },
+      { clases: "3 clases a la semana", precio: 75 },
     ],
     "Pirámides": [
       { clases: "1 clase a la semana", precio: 45 },

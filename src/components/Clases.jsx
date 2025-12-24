@@ -11,13 +11,13 @@ const Clases = (props) => {
 const datos = {
     USERA: {
       mañanas: ["Sábados a las 10:30h"],
-      tardes: ["Lunes, Miércoles - 18:30h"],
+      tardes: ["Lunes - 18:30h", "Miércoles - 18:30h y 20.00h", "Sábados - 10:30h"],
       direccion: "La Verbena, Calle Juan Zofio 49, 28026 Madrid",
       mapsLink: "https://maps.app.goo.gl/sgm1rB51J7czscD38",
     },
     PIRAMIDES: {
 
-      tardes: ["Miércoles - 20:30h"],
+      tardes: ["Lunes - 20:00h"],
       direccion: "Paso, P.º de Juan Antonio Vallejo-Nájera Botas, 25, 28005 Madrid",
       mapsLink: "https://maps.app.goo.gl/ukBmjkLSFVtcYLxz7",
     },
@@ -112,7 +112,7 @@ const datos = {
               <AiOutlineCalendar size={25} />
               <span>Tardes</span>
             </span>
-            <span className="font-semibold">{info.tardes.join(", ")}</span>
+            <span className="font-semibold">{info.tardes.map((item)=>{return (<span><br/><span key={item}>{item}</span></span>)})}</span>
           </span>
 
        

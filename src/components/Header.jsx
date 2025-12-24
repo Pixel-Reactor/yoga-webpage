@@ -10,7 +10,7 @@ const Header = (props) => {
   return (
     <div 
     className={
-      ` h-12 w-full  flex flex-row  transition-all duration-1000 items-center justify-center fixed top-1  py-2 z-50 
+      ` h-12 w-full  flex flex-row  transition-all duration-1000 items-center justify-center fixed top-1  py-2 z-50 cursor-pointer select-none 
       ${props.scroll > 300 ? ' bg-zinc-900/60': 'bg-transparent'} `}>
      
         <ul className="flex gap-4 md:gap-16 font-[Dosis] text-xs font-semibold text-zinc-100/70  overflow-x-auto">
