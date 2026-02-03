@@ -17,7 +17,7 @@ const datos = {
     },
     PIRAMIDES: {
 
-      tardes: ["Lunes - 20:00h"],
+      tardes: ["Lunes - 20:30h"],
       direccion: "Paso, P.º de Juan Antonio Vallejo-Nájera Botas, 25, 28005 Madrid",
       mapsLink: "https://maps.app.goo.gl/ukBmjkLSFVtcYLxz7",
     },
