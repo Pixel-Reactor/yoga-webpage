@@ -17,12 +17,6 @@ function App() {
   };
   useEffect(() => {
     
-    const GetVisit = async() =>{
-      const visit =await axios.post(import.meta.env.VITE_API_URL+'/visit');
-    
-    }
-    GetVisit();
-   
     window.addEventListener("scroll", ScrollListener);
     return () => {
       window.removeEventListener("scroll", ScrollListener);

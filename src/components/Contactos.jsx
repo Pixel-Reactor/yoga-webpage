@@ -74,11 +74,11 @@ const Contactos = (props) => {
               ¿ Estás preparad@ para empezar? <br />
               ¿ Tienes alguna pregunta? <br /> ¡ No dudes en contactar conmigo !{" "}
               <br />
-              Utiliza el botón abajo para <span className="font-semibold">Whats'App</span>, <span className="font-semibold">Instagram</span>  o rellena el formulario .
+              Utiliza los botones a la derecha para <span className="font-semibold">Whats'App</span>, <span className="font-semibold">Instagram</span> 
             </p>
           </div>
 
-          <form onSubmit={handleSubmit}>
+          {/* <form onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
                 htmlFor="name"
@@ -156,7 +156,7 @@ const Contactos = (props) => {
                 "Enviar"
               )}
             </button>
-          </form>
+          </form> */}
         </div>
         {sendmsg.on && (
           <div
