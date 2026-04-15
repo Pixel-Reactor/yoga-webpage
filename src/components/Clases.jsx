@@ -15,12 +15,7 @@ const datos = {
       direccion: "La Verbena, Calle Juan Zofio 49, 28026 Madrid",
       mapsLink: "https://maps.app.goo.gl/sgm1rB51J7czscD38",
     },
-    PIRAMIDES: {
-
-      tardes: ["Lunes - 20:30h"],
-      direccion: "Paso, P.º de Juan Antonio Vallejo-Nájera Botas, 25, 28005 Madrid",
-      mapsLink: "https://maps.app.goo.gl/ukBmjkLSFVtcYLxz7",
-    },
+    
   };
 
     const info = datos[ubicacion];
@@ -142,7 +137,7 @@ const datos = {
                 className="  max-w-[300px] min-w-[300px] max-h-[200px] min-h-[200px]  object-contain drop-shadow-2xl"
               />
               <img
-                src="/helebg.jpg"
+                src="/yogaconhele-mats.png"
                 alt="presencial"
                 loading="lazy"
                 className=" w-[234px] rounded-sm h-[149px] top-[20px]   object-cover absolute"

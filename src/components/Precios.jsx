@@ -12,9 +12,7 @@ const Precios = (props) => {
       { clases: "2 clases a la semana", precio: 55 },
       { clases: "3 clases a la semana", precio: 75 },
     ],
-    "Pirámides": [
-      { clases: "1 clase a la semana", precio: 45 },
-    ],
+   
   };
   useEffect(() => {
     const updateTop = (ref)=>{ 
