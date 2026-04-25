@@ -48,16 +48,23 @@ const Contactos = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setsending(true);
-    const res = await axios.post(
-      import.meta.env.VITE_API_URL + "/send/form/",
-      message
-    );
-    if (res.status === 200){
+    try {
+      const res = await axios.post(
+        import.meta.env.VITE_API_URL + "/send/form/",
+        message
+      );
+      if (res.status === 200) {
+        setsendmsg({ on: true, success: true, text: res.data.text });
+      } else {
+        setsendmsg({ on: true, success: false, text: res.data.text });
+      }
+    } catch (error) {
+      const msg =
+        error.response?.data?.text ||
+        "Error al enviar el mensaje. Inténtalo de nuevo.";
+      setsendmsg({ on: true, success: false, text: msg });
+    } finally {
       setsending(false);
-      setsendmsg({on:true,success:true,text:res.data.text})
-    } else {
-      setsending(false);
-      setsendmsg({on:true,success:false,text:res.data.text})
     }
   };
 
@@ -78,7 +85,7 @@ const Contactos = (props) => {
             </p>
           </div>
 
-          {/* <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
                 htmlFor="name"
@@ -156,7 +163,7 @@ const Contactos = (props) => {
                 "Enviar"
               )}
             </button>
-          </form> */}
+          </form>
         </div>
         {sendmsg.on && (
           <div

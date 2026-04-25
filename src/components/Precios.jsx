@@ -104,14 +104,14 @@ const Precios = (props) => {
               <span className="mr-2 text-5xl ">€30</span>
               <span className="text-gray-500 dark:text-gray-400">/mes</span>
             </div>
-            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200">
+            {/* <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200">
             2 clases por semana
             </p>
           
             <div className="flex justify-center items-baseline my-8">
               <span className="mr-2 text-5xl ">€40</span>
               <span className="text-gray-500 dark:text-gray-400">/mes</span>
-            </div>
+            </div> */}
             </div>
           </div>
 

@@ -150,7 +150,7 @@ const datos = {
                   <AiOutlineCalendar size={25} />
                    <span>Tardes </span>
                    </span>
-                   <span className="font-semibold text-right">Martes y Jueves a las las 19:30h</span>
+                   <span className="font-semibold text-right">Martes a las 19:30h</span>
               </span>
               <p className=" leading-6 font-extralight text-lg">
                 Clases online en grupos reducidos para poder atenderte y acompañarte de la mejor manera posible.
