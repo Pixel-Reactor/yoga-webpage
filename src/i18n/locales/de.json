@@ -1,0 +1,98 @@
+{
+    "nav": {
+        "home": "START",
+        "practice": "PRAXIS",
+        "classes": "KURSE",
+        "prices": "PREISE",
+        "contact": "KONTAKT"
+    },
+    "contact": {
+        "title": "Möchtest Du Beginnen?",
+        "intro1": "Bist du bereit anzufangen?",
+        "intro2": "Hast du eine Frage?",
+        "intro3": "Melde dich gerne bei mir!",
+        "intro4": "Nutze die Buttons rechts für",
+        "name": "Name",
+        "namePlaceholder": "dein Name",
+        "email": "E-Mail",
+        "emailPlaceholder": "beispiel@gmail.com",
+        "message": "Nachricht",
+        "messagePlaceholder": "Stelle hier deine Frage oder lasse das Feld frei und gib deine E-Mail an, damit ich dich kontaktieren kann",
+        "submit": "Senden",
+        "sending": "Wird gesendet",
+        "fallbackError": "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuche es erneut."
+    },
+    "intro": {
+        "eyebrow": "VINYASA KURSE",
+        "brand": "YOGA MIT HELE",
+        "text": "Lerne dich selbst kennen und vertiefe deine Praxis durch diese wunderbare jahrtausendealte Tradition, deren Vorteile schon ab der ersten Stunde spürbar sind.",
+        "cta": "Kostenlose Probestunde buchen"
+    },
+    "about": {
+        "practiceEyebrow": "Über die Praxis",
+        "practiceTitle": "DIE YOGA-PRAXIS",
+        "practiceText": "Durch die Yoga-Praxis können wir unsere Gesundheit ganzheitlich verbessern. Die Suche nach körperlichem, mentalem und emotionalem Gleichgewicht ist in diesem komplexen Jahrhundert immer deutlicher geworden. Ob du hier bist, um Stress abzubauen und deine mentale Gesundheit zu stärken, um Kraft und Flexibilität zu entwickeln oder dich von einer Verletzung zu erholen: Im Yoga kannst du Antworten finden. Oft kommen wir mit konkreten Zielen in die erste Stunde, und mit der Zeit sehen wir nicht nur, wie sich diese Ziele erfüllen, sondern entdecken viele zusätzliche Vorteile. Prioritäten verändern sich, und wir wachsen auf Ebenen, die wir am Anfang nicht erwartet hätten. Körper und Geist formen sich nach und nach, und ein Gefühl von Wohlbefinden und Dankbarkeit findet Raum in unserem Leben. Yoga verlangt Disziplin, Geduld, Gleichmut und Loslassen. Mit Zeit und der richtigen Haltung können Antworten entstehen. Du brauchst weder die beste Matte noch einen besonders flexiblen oder starken Körper. Du brauchst nur Haltung und Präsenz.",
+        "more": "Mehr lesen",
+        "less": "Weniger lesen",
+        "classesEyebrow": "Über die Kurse",
+        "classesTitle": "DIE KURSE",
+        "classesText": "In den Kursen arbeiten wir progressiv und angepasst an dein Level. Jede Stunde legt den Fokus auf unterschiedliche Schwerpunkte, um den ganzen Körper zu lösen und zu stärken. Wir beginnen damit, den Körper aufzuwärmen und mit Sonnengrüßen in die Praxis einzutreten. Danach richten wir die Asanas auf das Ziel des Tages aus und beenden die Stunde mit einer wohltuenden geführten Entspannung in Savasana. In den Kursen von einer Stunde und fünfzehn Minuten integrieren wir außerdem energetische Arbeit mit Pranayama und lernen Schritt für Schritt, die Energie über den Atem zu lenken und zu fokussieren."
+    },
+    "prices": {
+        "eyebrow": "Flexible Optionen",
+        "title": "Wähle deinen Kursplan",
+        "text": "Wähle die Kurse, an denen du während der Woche teilnehmen möchtest. Du erhältst Zugang zu den Online- und Vor-Ort-Kursen.",
+        "collectiveTitle": "Gruppenkurse bei",
+        "perMonth": "/Monat",
+        "perSession": "/Einheit",
+        "onlineTitle": "Online",
+        "onlineFrequency": "1 Kurs pro Woche",
+        "onlineNote": "Live-Kurse mit persönlicher Begleitung und guter Verbindung.",
+        "homeTitle": "Zu Hause",
+        "homeDescription": "Private Einzel- oder Gruppenkurse",
+        "from": "ab",
+        "homeNote": "Praxis angepasst an deine Zeit, dein Level und deine Ziele.",
+        "collectiveOptions": [
+            {
+                "classes": "1 Kurs pro Woche",
+                "price": 40
+            },
+            {
+                "classes": "2 Kurse pro Woche",
+                "price": 55
+            },
+            {
+                "classes": "3 Kurse pro Woche",
+                "price": 75
+            }
+        ]
+    },
+    "classes": {
+        "eyebrow": "Alle Level",
+        "title": "Vinyasa Yoga Kurse",
+        "subtitle": "Vor Ort · Online · Privat",
+        "inPerson": "VOR ORT",
+        "city": "Madrid",
+        "mornings": "Vormittags",
+        "afternoons": "Nachmittags",
+        "address": "Adresse",
+        "online": "ONLINE",
+        "onlineBadge": "LIVE",
+        "onlineText": "Online-Kurse in kleinen Gruppen, damit ich dich aufmerksam begleiten und deine Praxis persönlich unterstützen kann.",
+        "private": "PRIVAT",
+        "privateBadge": "Individuell",
+        "privateText": "Ideal, wenn du eine Praxis suchst, die sich deinem Rhythmus, deinem Zeitplan oder einem konkreten Ziel anpasst. Eine persönliche und fokussierte Alternative.",
+        "privateNote": "Bis zu 4 Personen · individuelle Einheiten",
+        "schedule": {
+            "mornings": [
+                "Samstags um 10:30"
+            ],
+            "afternoons": [
+                "Montags - 18:30 und 20:00",
+                "Mittwochs - 18:30 und 20:00",
+                "Samstags - 10:30"
+            ],
+            "online": "Dienstags um 19:30"
+        }
+    }
+}

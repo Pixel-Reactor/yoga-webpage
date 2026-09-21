@@ -1,0 +1,98 @@
+{
+    "nav": {
+        "home": "INIZIO",
+        "practice": "PRATICA",
+        "classes": "LEZIONI",
+        "prices": "PREZZI",
+        "contact": "CONTATTO"
+    },
+    "contact": {
+        "title": "Ti Va Di Iniziare?",
+        "intro1": "Sei pront@ per cominciare?",
+        "intro2": "Hai qualche domanda?",
+        "intro3": "Non esitare a contattarmi!",
+        "intro4": "Usa i pulsanti a destra per",
+        "name": "Nome",
+        "namePlaceholder": "il tuo nome",
+        "email": "Email",
+        "emailPlaceholder": "esempio@gmail.com",
+        "message": "Messaggio",
+        "messagePlaceholder": "Scrivi qui la tua domanda, oppure lascialo vuoto inserendo l'email così posso contattarti",
+        "submit": "Invia",
+        "sending": "Invio",
+        "fallbackError": "Errore durante l'invio del messaggio. Riprova."
+    },
+    "intro": {
+        "eyebrow": "LEZIONI VINYASA",
+        "brand": "YOGA CON HELE",
+        "text": "Conosci te stess@ e approfondisci attraverso questa meravigliosa pratica millenaria, con benefici percepibili fin dalla prima lezione.",
+        "cta": "Prenota una lezione di prova gratuita"
+    },
+    "about": {
+        "practiceEyebrow": "Sulla pratica",
+        "practiceTitle": "LA PRATICA DELLO YOGA",
+        "practiceText": "Attraverso la pratica dello yoga possiamo migliorare il nostro stato di salute in modo integrale. La ricerca dell'equilibrio fisico, mentale ed emotivo è una necessità sempre più evidente in questo complicato XXI secolo. Che tu sia arrivat@ qui per eliminare lo stress e migliorare la salute mentale, per ottenere forza e flessibilità, o mentre ti stai riprendendo da un infortunio, nello yoga puoi trovare risposte. Spesso arriviamo alla prima lezione con obiettivi concreti e, con il tempo, non solo vediamo quegli obiettivi realizzarsi, ma scopriamo anche molti altri benefici. Le priorità cambiano e progrediamo su livelli diversi da quelli che immaginavamo al primo contatto con lo yoga. Corpo e mente si trasformano gradualmente, e una sensazione di benessere e gratitudine trova spazio nella nostra vita, aiutandoci nei momenti belli e difficili. Lo yoga richiede disciplina, pazienza, equanimità e distacco. Con il tempo e l'atteggiamento giusto possiamo trovare risposte. Non hai bisogno del tappetino migliore, né di un corpo flessibile o forte. Hai bisogno solo di attitudine e presenza.",
+        "more": "Leggi di più",
+        "less": "Leggi meno",
+        "classesEyebrow": "Sulle lezioni",
+        "classesTitle": "LE LEZIONI",
+        "classesText": "Nelle lezioni lavoreremo in modo progressivo e adattato al tuo livello. In ogni lezione ci concentreremo su punti diversi, cercando di liberare e rafforzare tutto il corpo. Inizieremo riscaldando il corpo ed entrando nella pratica con i saluti al sole. Poi orienteremo le asana verso l'obiettivo del giorno e termineremo con un delizioso rilassamento guidato in savasana. Nelle lezioni di un'ora e un quarto includeremo anche il lavoro energetico con i pranayama, esplorando poco a poco diversi modi di controllare e focalizzare l'energia attraverso il respiro."
+    },
+    "prices": {
+        "eyebrow": "Opzioni flessibili",
+        "title": "Scegli il tuo piano di lezioni",
+        "text": "Scegli le lezioni a cui vuoi partecipare durante la settimana. Avrai accesso sia alle lezioni online che a quelle in presenza.",
+        "collectiveTitle": "Lezioni di gruppo a",
+        "perMonth": "/mese",
+        "perSession": "/sessione",
+        "onlineTitle": "Online",
+        "onlineFrequency": "1 lezione a settimana",
+        "onlineNote": "Lezioni in diretta con accompagnamento personalizzato e buona connessione.",
+        "homeTitle": "A domicilio",
+        "homeDescription": "Lezioni private individuali o di gruppo",
+        "from": "da",
+        "homeNote": "Pratica adattata al tuo tempo, livello e obiettivi.",
+        "collectiveOptions": [
+            {
+                "classes": "1 lezione a settimana",
+                "price": 40
+            },
+            {
+                "classes": "2 lezioni a settimana",
+                "price": 55
+            },
+            {
+                "classes": "3 lezioni a settimana",
+                "price": 75
+            }
+        ]
+    },
+    "classes": {
+        "eyebrow": "Tutti i livelli",
+        "title": "Lezioni di Vinyasa Yoga",
+        "subtitle": "In presenza · Online · Private",
+        "inPerson": "IN PRESENZA",
+        "city": "Madrid",
+        "mornings": "Mattina",
+        "afternoons": "Pomeriggio",
+        "address": "Indirizzo",
+        "online": "ONLINE",
+        "onlineBadge": "DAL VIVO",
+        "onlineText": "Lezioni online in piccoli gruppi per accompagnarti da vicino e sostenere la tua pratica con attenzione.",
+        "private": "PRIVATE",
+        "privateBadge": "Su misura",
+        "privateText": "Ideale se cerchi una pratica più adattabile al tuo ritmo, ai tuoi orari o a un obiettivo concreto. Un'alternativa vicina, personale e focalizzata.",
+        "privateNote": "Fino a 4 persone · sessioni su misura",
+        "schedule": {
+            "mornings": [
+                "Sabato alle 10:30"
+            ],
+            "afternoons": [
+                "Lunedì - 18:30 e 20:00",
+                "Mercoledì - 18:30 e 20:00",
+                "Sabato - 10:30"
+            ],
+            "online": "Martedì alle 19:30"
+        }
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "nav": {
+        "home": "INICIO",
+        "practice": "PRÁCTICA",
+        "classes": "CLASES",
+        "prices": "PRECIOS",
+        "contact": "CONTACTO"
+    },
+    "contact": {
+        "title": "¿Te Animas?",
+        "intro1": "¿Estás preparad@ para empezar?",
+        "intro2": "¿Tienes alguna pregunta?",
+        "intro3": "¡No dudes en contactar conmigo!",
+        "intro4": "Utiliza los botones a la derecha para",
+        "name": "Nombre",
+        "namePlaceholder": "tu nombre",
+        "email": "Correo electrónico",
+        "emailPlaceholder": "ejemplo@gmail.com",
+        "message": "Mensaje",
+        "messagePlaceholder": "Pregunta algo aquí, o déjalo en blanco rellenando el campo email para que me ponga en contacto",
+        "submit": "Enviar",
+        "sending": "Enviando",
+        "fallbackError": "Error al enviar el mensaje. Inténtalo de nuevo."
+    },
+    "intro": {
+        "eyebrow": "CLASES VINYASA",
+        "brand": "YOGA CON HELE",
+        "text": "Conócete y profundiza en ti a través de esta maravillosa práctica milenaria que ofrece multitud de beneficios absolutamente palpables desde la primera clase.",
+        "cta": "Reserva una clase de prueba gratis"
+    },
+    "about": {
+        "practiceEyebrow": "Sobre la Práctica",
+        "practiceTitle": "LA PRÁCTICA DEL YOGA",
+        "practiceText": "A través de la práctica de yoga podemos mejorar nuestro estado de salud de manera integral. La búsqueda del equilibrio físico, mental y emocional, son una necesidad cada vez más obvia en este complicado siglo XXI. Tanto si has llegado hasta aquí buscando eliminar el estrés y mejorar tu salud mental, como si has llegado queriendo conseguir fuerza y flexibilidad, o te estás recuperando de una lesión, en el yoga puedes encontrar respuestas. Muchas veces llegamos a nuestra primera clase con unos objetivos concretos, y con el tiempo, no sólo vemos cómo esos objetivos se cumplen sino que vemos multitud de beneficios añadidos. También observamos como las prioridades cambian y progresamos a niveles muy distintos de los que teníamos cuando tomamos contacto por primera vez con el yoga. El cuerpo y la mente se van moldeando de forma mágica, y la sensación de bienestar y gratitud se van haciendo hueco en nuestras vidas, ayudándonos a sobrellevar los buenos y malos momentos. El yoga requiere disciplina, requiere paciencia y el cultivo de características poco habituales hoy día como la ecuanimidad y el desapego. Cuando le dedicamos el tiempo y la actitud necesarios podemos encontrar respuestas. No necesitas la mejor esterilla, ni un cuerpo flexible ni fuerte. Sólo necesitas la actitud y la entrega.",
+        "more": "Ver más",
+        "less": "Ver menos",
+        "classesEyebrow": "Sobre las clases",
+        "classesTitle": "LAS CLASES",
+        "classesText": "En las clases trabajaremos de manera progresiva y adaptada a tu nivel. En cada clase nos enfocaremos en diferentes puntos, buscando liberar y fortalecer el cuerpo en su totalidad. Empezaremos calentando el cuerpo y entrando en la práctica con unos saludos al sol. Después, enfocaremos las asanas (posturas) al objetivo de este día y terminaremos con una deliciosa relajación guiada en savasana. En las clases de una hora y cuarto incluiremos también el trabajo energético con pranayamas, donde veremos poco a poco diferentes maneras de controlar y enfocar la energía con la respiración."
+    },
+    "prices": {
+        "eyebrow": "Opciones flexibles",
+        "title": "Elige tu plan de clases",
+        "text": "Elige las clases en las que quieras participar durante la semana. Tendrás acceso tanto a las clases online como a las presenciales.",
+        "collectiveTitle": "Colectivas en",
+        "perMonth": "/mes",
+        "perSession": "/sesión",
+        "onlineTitle": "Online",
+        "onlineFrequency": "1 clase por semana",
+        "onlineNote": "Clases en directo con seguimiento personalizado y buena conexión.",
+        "homeTitle": "A domicilio",
+        "homeDescription": "Clases privadas individuales o grupales",
+        "from": "desde",
+        "homeNote": "Práctica adaptada a tu tiempo, nivel y objetivos.",
+        "collectiveOptions": [
+            {
+                "classes": "1 clase a la semana",
+                "price": 40
+            },
+            {
+                "classes": "2 clases a la semana",
+                "price": 55
+            },
+            {
+                "classes": "3 clases a la semana",
+                "price": 75
+            }
+        ]
+    },
+    "classes": {
+        "eyebrow": "Todos los niveles",
+        "title": "Clases Vinyasa Yoga",
+        "subtitle": "Presencial · Online · Privadas",
+        "inPerson": "PRESENCIAL",
+        "city": "Madrid",
+        "mornings": "Mañanas",
+        "afternoons": "Tardes",
+        "address": "Dirección",
+        "online": "ONLINE",
+        "onlineBadge": "EN VIVO",
+        "onlineText": "Clases online en grupos reducidos para acompañarte y atenderte de la mejor manera posible, sin perder la cercanía de la práctica.",
+        "private": "PRIVADAS",
+        "privateBadge": "A medida",
+        "privateText": "Ideal si buscas una práctica más adaptable a tu ritmo, a tu horario o a una necesidad concreta. Una alternativa cercana, personalizada y muy enfocada en tus objetivos.",
+        "privateNote": "Hasta 4 personas · sesiones a medida",
+        "schedule": {
+            "mornings": [
+                "Sábados a las 10:30h"
+            ],
+            "afternoons": [
+                "Lunes - 18:30h y 20:00h",
+                "Miércoles - 18:30h y 20:00h",
+                "Sábados - 10:30h"
+            ],
+            "online": "Martes a las 19:30h"
+        }
+    }
+}
