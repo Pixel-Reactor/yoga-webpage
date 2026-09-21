@@ -1,17 +1,15 @@
 import React,{useEffect, useState} from "react";
 import { Handler } from "../context/Context";
+import { useI18n } from "../i18n/I18nContext.jsx";
 
 const Precios = (props) => {
   const { prices } = Handler();
+  const { t } = useI18n();
 
   const [sitio, setSitio] = useState("La Verbena");
 
   const precios = {
-    "La Verbena": [
-      { clases: "1 clase a la semana", precio: 40 },
-      { clases: "2 clases a la semana", precio: 55 },
-      { clases: "3 clases a la semana", precio: 75 },
-    ],
+    "La Verbena": t("prices.collectiveOptions"),
    
   };
   useEffect(() => {
@@ -35,104 +33,93 @@ const Precios = (props) => {
     };
   }, []);
   return (
-    <section id='prices' ref={prices} className="bg-gradient-to-t  from-zinc-900/90 via-stone-800/90 font-[Dosis] to-amber-950/90 py-10">
-      
-      <div  className="py-8 px-4 mt-20  max-w-screen-3xl lg:py-16 lg:px-6 relative"> 
-      <div className="z-0 absolute top-[-135px] left-0 right-0 mx-auto w-96 ">
-            <img
-              src="/cccoil.svg"
-              alt="vortex"
-              width="350px"
-              height="350px"
-            />
-          </div>
-        <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-          <h2 className="mb-4 text-4xl tracking-tight  text-gray-900 dark:text-white text-shadow-w-s">
-            Elige tu plan de clases
-          </h2>
-          <p className=" font-extralight text-gray-100 sm:text-lg dark:text-gray-200 text-shadow-w-s">
-          Elige las clases en las que quieras participar durante la semana. Tendrás acceso tanto a las clases online como a las presenciales.  </p>
+    <section id='prices' ref={prices} className="bg-gradient-to-t from-zinc-900/90 via-stone-800/90 to-amber-950/90 py-10 font-[Dosis]">
+      <div className="relative max-w-screen-3xl px-4 py-8 mt-20 lg:px-6 lg:py-16">
+        <div className="absolute left-0 right-0 top-[-135px] z-0 mx-auto w-96 opacity-70">
+          <img src="/cccoil.svg" alt="vortex" width="350px" height="350px" />
         </div>
-       
-        <div className="py-10 md:flex md:flex-wrap sm:gap-6   ">
-         <div className="flex flex-col hover:scale-105 transition-all min-w-[300px] justify-between shadow-amber-800/60 shadow-xl p-4 mx-auto my-5 max-w-xs text-center rounded-xl border-2 border-zinc-50 dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80 dark:text-white">
-        <div className="border w-full border-zinc-100/60 border-dashed shadow-xs h-full shadow-white p-2 rounded-md flex flex-col gap-5">
-          <div className="flex flex-col items-center gap-4">
-      <div className="flex w-full justify-center ">
-        {Object.keys(precios).map((s) => (
-          <button
-            key={s}
-            className={`px-4 py-2 rounded font-semibold transition-all w-full ${
-              sitio === s
-                ? "bg-amber-400 text-black shadow-lg"
-                : "bg-zinc-700 text-white hover:bg-amber-500/80"
-            }`}
-            onClick={() => setSitio(s)}
-          >
-            {s}
-          </button>
-        ))}
-      </div>
 
-    </div>
-          <h3 className=" text-2xl font-bold ">
-            CLASES COLECTIVAS EN <br />
-            "{sitio}"
-          </h3>
+        <div className="relative z-10 mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
+          <p className="mb-3 text-xs uppercase tracking-[0.28em] text-zinc-200/80">
+            {t("prices.eyebrow")}
+          </p>
+          <h2 className="mb-4 text-4xl tracking-tight text-gray-900 text-shadow-w-s dark:text-white">
+            {t("prices.title")}
+          </h2>
+          <p className="font-extralight text-gray-100 text-shadow-w-s sm:text-lg dark:text-gray-200">
+            {t("prices.text")}
+          </p>
+        </div>
 
-          {precios[sitio].map((item, index) => (
-            <div key={index}>
-              <p className="font-light  text-gray-500 sm:text-lg dark:text-gray-200">
-                {item.clases}
-              </p>
-              <div className="flex justify-center items-baseline my-1">
-                <span className="mr-2 text-5xl font-semibold">€{item.precio}</span>
-                <span className="text-gray-500 dark:text-gray-400">/mes</span>
+        <div className="relative z-10 grid gap-5 py-8 md:grid-cols-3">
+          <div className="mx-auto my-2 w-full max-w-xs rounded-[2rem] border border-white/10 bg-[radial-gradient(ellipse_at_center,_rgba(20,20,20,0.75),_rgba(10,10,10,0.88))] p-4 shadow-[0_18px_40px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 xl:p-5">
+            <div className="flex h-full flex-col gap-5 rounded-[1.5rem] border border-dashed border-zinc-200/20 bg-zinc-900/10 p-3 sm:p-4">
+              <div className="flex w-full justify-center">
+                {Object.keys(precios).map((s) => (
+                  <button
+                    key={s}
+                    className={`w-full rounded-lg px-3 py-2 text-sm font-semibold transition-all ${
+                      sitio === s
+                        ? "bg-amber-400 text-black shadow-lg shadow-amber-400/20"
+                        : "bg-zinc-800 text-white hover:bg-zinc-700"
+                    }`}
+                    onClick={() => setSitio(s)}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+
+              <h3 className="text-xl font-bold uppercase text-zinc-50">
+                {t("prices.collectiveTitle")} {sitio}
+              </h3>
+
+              <div className="space-y-4">
+                {precios[sitio].map((item, index) => (
+                  <div key={index} className="rounded-xl border border-white/5 bg-white/3 p-3">
+                    <p className="text-sm text-zinc-200/80">{item.classes}</p>
+                    <div className="mt-2 flex items-baseline justify-center gap-2">
+                      <span className="text-4xl font-semibold text-white">€{item.price}</span>
+                      <span className="text-sm text-zinc-300">{t("prices.perMonth")}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-          <div className="hover:scale-105 transition-all flex flex-col min-w-[300px] justify-between shadow-amber-800/60 shadow-xl  p-2 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-xl border-2 border-zinc-50  dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
-          <div className="border border-zinc-100/60 border-dashed shadow-xs shadow-white p-2 rounded-md w-full h-full ">
-          <h3 className="my-4 text-2xl ">ONLINE</h3>
-          <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200">
-            1 clase por semana
-            </p>
-           
-            <div className="flex justify-center items-baseline my-8">
-              <span className="mr-2 text-5xl ">€30</span>
-              <span className="text-gray-500 dark:text-gray-400">/mes</span>
-            </div>
-            {/* <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200">
-            2 clases por semana
-            </p>
-          
-            <div className="flex justify-center items-baseline my-8">
-              <span className="mr-2 text-5xl ">€40</span>
-              <span className="text-gray-500 dark:text-gray-400">/mes</span>
-            </div> */}
+          </div>
+
+          <div className="mx-auto my-2 w-full max-w-xs rounded-[2rem] border border-white/10 bg-[radial-gradient(ellipse_at_center,_rgba(20,20,20,0.75),_rgba(10,10,10,0.88))] p-4 shadow-[0_18px_40px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 xl:p-5">
+            <div className="flex h-full flex-col gap-5 rounded-[1.5rem] border border-dashed border-zinc-200/20 bg-zinc-900/10 p-3 sm:p-4">
+              <h3 className="text-xl font-bold uppercase text-zinc-50">{t("prices.onlineTitle")}</h3>
+              <p className="text-zinc-200/80">{t("prices.onlineFrequency")}</p>
+
+              <div className="flex items-baseline justify-center gap-2">
+                <span className="text-5xl font-semibold text-white">€30</span>
+                <span className="text-sm text-zinc-300">{t("prices.perMonth")}</span>
+              </div>
+
+              <div className="rounded-xl border border-white/5 bg-white/3 p-3 text-sm text-zinc-200/80">
+                {t("prices.onlineNote")}
+              </div>
             </div>
           </div>
 
-       
-          <div  className="flex flex-col hover:scale-105 transition-all justify-between shadow-amber-800/60 shadow-xl  p-2 mx-auto my-5  max-w-xs text-center text-gray-900  rounded-xl border-2 border-zinc-50  dark:border-amber-500/30 xl:p-8 dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-900/80 via-zinc-800/90 to-zinc-900/80  dark:text-white">
-          <div className="border w-full h-full border-zinc-100/60 border-dashed shadow-xs shadow-white p-2 rounded-md">
+          <div className="mx-auto my-2 w-full max-w-xs rounded-[2rem] border border-white/10 bg-[radial-gradient(ellipse_at_center,_rgba(20,20,20,0.75),_rgba(10,10,10,0.88))] p-4 shadow-[0_18px_40px_rgba(0,0,0,0.25)] transition hover:-translate-y-1 xl:p-5">
+            <div className="flex h-full flex-col gap-5 rounded-[1.5rem] border border-dashed border-zinc-200/20 bg-zinc-900/10 p-3 sm:p-4">
+              <h3 className="text-2xl font-bold uppercase text-zinc-50">{t("prices.homeTitle")}</h3>
+              <p className="text-zinc-200/80">{t("prices.homeDescription")}</p>
 
-            <h3 className="my-4 text-2xl ">A DOMICILIO</h3>
-            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-200">
-              Clases privadas inviduales o grupales
-            </p>
-            <div className="flex justify-center items-baseline my-8">
-            <span className="mr-2 text-2xl ">desde</span>
-              <span className="mr-2 text-5xl ">€30</span>
-              <span className="text-gray-500 dark:text-gray-400">/sesión</span>
-              
+              <div className="flex items-baseline justify-center gap-2">
+                <span className="text-2xl text-zinc-300">{t("prices.from")}</span>
+                <span className="text-5xl font-semibold text-white">€30</span>
+                <span className="text-sm text-zinc-300">{t("prices.perSession")}</span>
+              </div>
+
+              <div className="rounded-xl border border-white/5 bg-white/3 p-3 text-sm text-zinc-200/80">
+                {t("prices.homeNote")}
+              </div>
             </div>
           </div>
-         </div>
-
-
         </div>
       </div>
     </section>

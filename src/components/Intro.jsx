@@ -1,9 +1,11 @@
 import { useState, useEffect,Suspense } from "react";
 import { Handler } from "../context/Context";
+import { useI18n } from "../i18n/I18nContext.jsx";
 
 
 const Intro = (props) => {
   const { home,Scrollto,contact } = Handler();
+  const { t } = useI18n();
 
   const [mandala, setmandala] = useState({
     position: "absolute",
@@ -93,13 +95,13 @@ const Intro = (props) => {
           <div className=" p-8 pr-0 sm:mt-8 z-0 flex justify-between sm:flex-col  ">
             <div className="">
               <h1 className="font-[Dosis] text-3xl sm:font-4xl text-shadow-w-s  font-medium text-zinc-200">
-                CLASES VINYASA
+                {t("intro.eyebrow")}
               </h1>
               <h2 className="font-mono text-shadow-w-xs text-5xl bg-gradient-to-b from-slate-50 via-zinc-300 to-slate-250  bg-clip-text text-transparent   tracking-tighter [word-spacing:-24px] sm:text-6xl md:text-7xl  mt-2 font-extrabold text-zinc-200 drop-shadow-2xl">
                 YOGA CON HELE
               </h2>
               <p className="leading-7 max-w-xs  font-[dosis] mt-3 text-zinc-200  font-normal ">
-              Conócete y profundiza en tí  a través de esta maravillosa práctica milenaria que ofrece multitud de beneficios absolutamente palpables desde la primera clase.
+              {t("intro.text")}
                 
               </p>
               <button
@@ -107,7 +109,7 @@ const Intro = (props) => {
                 onClick={()=>Scrollto(contact)}
                 className="text-white border border-amber-500 bg-slate-800/90 hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-3 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2 mt-2"
               >
-                Reserva una clase de prueba gratis
+                {t("intro.cta")}
               </button>
             </div>
 

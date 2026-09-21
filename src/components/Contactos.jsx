@@ -2,8 +2,10 @@ import React, { useEffect,  useState } from "react";
 
 import { Handler } from "../context/Context";
 import axios from "axios";
+import { useI18n } from "../i18n/I18nContext.jsx";
 const Contactos = (props) => {
   const { contact } = Handler();
+  const { t } = useI18n();
   const [sending, setsending] = useState(false);
   const [sendmsg, setsendmsg] = useState({
     on: false,
@@ -61,12 +63,15 @@ const Contactos = (props) => {
     } catch (error) {
       const msg =
         error.response?.data?.text ||
-        "Error al enviar el mensaje. Inténtalo de nuevo.";
+        t("contact.fallbackError");
       setsendmsg({ on: true, success: false, text: msg });
     } finally {
       setsending(false);
     }
   };
+
+  const inputClass =
+    "block w-full rounded-lg border border-zinc-600/70 bg-zinc-950/50 p-2.5 text-sm text-zinc-100 placeholder-zinc-400 shadow-inner shadow-black/20 outline-none transition focus:border-amber-400/70 focus:ring-2 focus:ring-amber-400/20";
 
   return (
     <div
@@ -76,12 +81,12 @@ const Contactos = (props) => {
       <div className="bg-[url('/ooorganize.svg')] bg-no-repeat bg-cover bg-center w-full h-full p-10 ">
         <div className="p-6 max-w-xl mx-auto">
           <div className="text-4xl tracking-tight text-justify text-gray-900 dark:text-white">
-            <h4 className="my-3 text-center text-shadow-w-xs ">¿Te Animas?</h4>
+            <h4 className="my-3 text-center text-shadow-w-xs ">{t("contact.title")}</h4>
             <p className="text-lg text-center  font-light text-gray-500 sm:text-xl dark:text-gray-200">
-              ¿ Estás preparad@ para empezar? <br />
-              ¿ Tienes alguna pregunta? <br /> ¡ No dudes en contactar conmigo !{" "}
+              {t("contact.intro1")} <br />
+              {t("contact.intro2")} <br /> {t("contact.intro3")}{" "}
               <br />
-              Utiliza los botones a la derecha para <span className="font-semibold">Whats'App</span>, <span className="font-semibold">Instagram</span> 
+              {t("contact.intro4")} <span className="font-semibold">Whats'App</span>, <span className="font-semibold">Instagram</span> 
             </p>
           </div>
 
@@ -91,7 +96,7 @@ const Contactos = (props) => {
                 htmlFor="name"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Nombre
+                {t("contact.name")}
               </label>
               <input
                 type="text"
@@ -99,8 +104,8 @@ const Contactos = (props) => {
                 name="name"
                 onChange={handleChange}
                 value={message.name}
-                placeholder="tu nombre"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder={t("contact.namePlaceholder")}
+                className={inputClass}
               />
             </div>
             <div className="my-6 ">
@@ -108,7 +113,7 @@ const Contactos = (props) => {
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Correo electrónico
+                {t("contact.email")}
               </label>
               <input
                 type="email"
@@ -116,8 +121,8 @@ const Contactos = (props) => {
                 name="email"
                 onChange={handleChange}
                 value={message.email}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="ejemplo@gmail.com"
+                className={inputClass}
+                placeholder={t("contact.emailPlaceholder")}
                 required
               />
             </div>
@@ -127,7 +132,7 @@ const Contactos = (props) => {
                 htmlFor="text"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Mensaje
+                {t("contact.message")}
               </label>
               <textarea
                 type=""
@@ -135,20 +140,20 @@ const Contactos = (props) => {
                 name="text"
                 value={message.text}
                 onChange={handleChange}
-                className="bg-gray-50 h-32 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Pregunta algo aqui, o dejalo en blanco rellenando el campo email para que me ponga en contacto"
+                className={`${inputClass} h-32`}
+                placeholder={t("contact.messagePlaceholder")}
               />
             </div>
 
             <button
               type="submit"
               disabled={sending}
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="w-full rounded-lg border border-amber-400/30 bg-zinc-950/70 px-5 py-2.5 text-center text-sm font-medium text-zinc-100 transition hover:bg-amber-400 hover:text-zinc-950 focus:outline-none focus:ring-4 focus:ring-amber-400/20 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
             >
               {sending ? (
                 <>
                   <div className="flex justify-center items-center gap-3">
-                    <span>Enviando</span>
+                    <span>{t("contact.sending")}</span>
                     <div class="sk-chase">
                       <div class="sk-chase-dot"></div>
                       <div class="sk-chase-dot"></div>
@@ -160,7 +165,7 @@ const Contactos = (props) => {
                   </div>
                 </>
               ) : (
-                "Enviar"
+                t("contact.submit")
               )}
             </button>
           </form>
